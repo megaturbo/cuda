@@ -1,4 +1,4 @@
-16:00:30 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
+14:35:52 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
 makeCudaGCC.sh jall 
 
 --------------------------------------------------------
@@ -272,5 +272,5 @@ make[1]: Nothing to be done for `compilelink'.
 [CBI] -> Student_Cuda_Image_gcc_cuda_70_x86_64 : End ALL!
 
 
-16:00:31 Build Finished (took 864ms)
+14:35:53 Build Finished (took 862ms)
 

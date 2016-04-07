@@ -47,6 +47,7 @@ override SRC_AUX+= ../BilatTools_OpenCV/src/core
 
 override SRC_AUX+= ../BilatTools_Cuda/src/core
 override SRC_AUX+= ../BilatTools_Cuda_Image/src/core
+override SRC_AUX+= ../Student_Cuda_Image/src/cpp/core
 
 #################
 #  API Ext 		#
