@@ -19,10 +19,11 @@
 <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Tuto_Image" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1367415214911_169" label="Student" name="Student">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Student_Cuda_Image" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Student_OMP_Image" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Student_Cuda" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Student_OMP" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda_Image" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_OMP" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_OMP_Image" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda_Image_Demo" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1391266587718_313" label="Target" name="Target">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RELEASE" type="4"/>
@@ -454,7 +455,7 @@
 <workingSet IMemento.internal.id="Tuto_API"/>
 <workingSet IMemento.internal.id="Tuto_Base"/>
 </workingSet>
-<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1455698426878_319" label="Multiple Working Sets" name="Aggregate:Make:Student:Target:Tools:Tuto_API:Tuto_Base:">
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1460032236906_316" label="Multiple Working Sets" name="Aggregate:Make:Student:Target:Tools:Tuto_API:Tuto_Base:">
 <workingSet IMemento.internal.id="Make"/>
 <workingSet IMemento.internal.id="Student"/>
 <workingSet IMemento.internal.id="Target"/>
