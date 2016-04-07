@@ -1,0 +1,25 @@
+12:38:31 **** Clean-only build of configuration CudaVisual_parallel for project Tuto_Image_Cuda_JNI ****
+makeCudaVisual.bat clean 
+init make
+init API-EXT
+init API-CBI
+
+[CUDA VISUAL] : clean  
+
+
+==================================================================================
+[CBI] -> Target            : Tuto_Image_Cuda_JNI_visual_cuda_70_64
+[CBI] -> Task			     : DELETE
+[CBI]
+[CBI] -> Delete .obj       : Q:/cedric.bilat/Targets/Tuto_Image_Cuda_JNI/obj
+[CBI] -> Delete .bin       : Q:/cedric.bilat/Targets/Tuto_Image_Cuda_JNI/bin
+[CBI] -> Delete .cubin     : Q:/cedric.bilat/Targets/Tuto_Image_Cuda_JNI/cubin
+[CBI] -> Delete doc        : Q:/cedric.bilat/Targets/Tuto_Image_Cuda_JNI/doc
+[CBI]
+[CBI] -> Delete deploy     : ../RELEASE/bin/Tuto_Image_Cuda_JNI_visual_cuda_70_64.dll
+[CBI] -> Delete deploy doc : ../RELEASE/doc/Tuto_Image_Cuda_JNI_visual_cuda_70_64.doc.tar.gz
+==================================================================================
+
+
+12:38:33 Build Finished (took 2s.524ms)
+

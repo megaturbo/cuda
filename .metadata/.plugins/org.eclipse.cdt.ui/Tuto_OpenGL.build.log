@@ -1,0 +1,235 @@
+09:32:55 **** Build of configuration IntelLinux_parallel for project Tuto_OpenGL ****
+makeIntelLinux.sh jall 
+
+--------------------------------------------------------
+[Runtime] : intel x86
+--------------------------------------------------------
+
+[Runtime] : Cuda  : /usr/local/cuda/lib64
+[Runtime] : Cula  : /usr/local/cula/lib64
+[Runtime] : MKL   : /opt/intel/mkl/lib/intel64
+[Runtime] : Intel : /opt/intel
+
+[Runtime] : GL/GLEW/GLU
+[Runtime] : FreeGlut
+[Runtime] : Java (JNI)
+[Runtime] : X11
+
+[Runtime] : BOOST   : /opt/api/ext/boost/[user-version]/lib/intel
+[Runtime] : OpenCV  : /opt/api/ext/opencv/[user-version]/lib
+[Runtime] : CppTest : /opt/api/ext/cpptest/[user-version]/LIB-STATIC/intel
+
+[Runtime] : bilat_tools
+[Runtime] : bilat_fenetrage
+[Runtime] : bilat_opengl
+[Runtime] : bilat_image
+[Runtime] : bilat_graphe2d
+[Runtime] : bilat_multicourbe_cuda
+[Runtime] : bilat_surface
+
+--------------------------------------------------------
+[Runtime] : intel x86 : Ready!
+--------------------------------------------------------
+
+
+[INTEL] : jall
+
+icpc (ICC) 15.0.3 20150407
+Copyright (C) 1985-2015 Intel Corporation.  All rights reserved.
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_OpenGL_intel_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/Tuto_OpenGL/bin/Tuto_OpenGL_intel_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -axSSE4.2
+[CBI] ->              : -fast
+[CBI] ->              : -par-threshold100
+[CBI] ->              : -std=c++11
+[CBI] ->              : -w
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /usr/include/X11
+
+[CBI] -> API_LIB :
+[CBI] ->              : /usr/lib/x86_64-linux-gnu
+
+[CBI] -> API_BIN :
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : GL
+[CBI] ->              : GLEW
+[CBI] ->              : GLU
+[CBI] ->              : X11
+
+
+[CBI] -> Compilation parallel (12 threads)
+
+[Tuto_OpenGL_intel_x86_64] -> icpc compiling .cpp : src/main.cpp
+[Tuto_OpenGL_intel_x86_64] -> icpc compiling .cpp : src/core/useOpenGL.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/Tuto_OpenGL/bin/Tuto_OpenGL_intel_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->              : -L/usr/lib/x86_64-linux-gnu
+[CBI] ->              : -lGL
+[CBI] ->              : -lGLEW
+[CBI] ->              : -lGLU
+[CBI] ->              : -lX11
+[CBI] ->              : -lglut
+ipo: warning #11021: unresolved XF86VidModeGetViewPort
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XF86VidModeGetModeLine
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XISelectEvents
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XF86VidModeGetAllModeLines
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XF86VidModeSetViewPort
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XF86VidModeSwitchToMode
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XF86VidModeQueryExtension
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved xcb_get_file_descriptor
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_connect
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_generate_id
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_connect_to_display_with_auth_info
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_writev
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_wait_for_reply
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_poll_for_event
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_get_maximum_request_length
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_poll_for_reply
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_take_socket
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_wait_for_event
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_disconnect
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_connection_has_error
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_get_setup
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_parse_display
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved _nv024glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv020glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv023tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv008tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv024tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv007tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv006tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XextFindDisplay
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv022tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv009tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XextRemoveDisplay
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv021tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv020tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv023glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XextDestroyExtension
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv016glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv014glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv027glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XMissingExtension
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv015glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv014tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv015tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv016tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv019tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv000glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv018tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv017tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XextCreateExtension
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv011tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv001glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv013tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XextAddDisplay
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv017glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_OpenGL_intel_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/Tuto_OpenGL/bin/Tuto_OpenGL_intel_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : INTEL (icpc)
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 0 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/Tuto_OpenGL_intel_x86_64.run
+
+[CBI] -> Tuto_OpenGL_intel_x86_64 : End ALL!
+
+
+09:32:56 Build Finished (took 520ms)
+

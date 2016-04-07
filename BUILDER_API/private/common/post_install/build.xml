@@ -1,0 +1,51 @@
+<!--https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html-->
+<project name="ant_jar_builder" basedir="." default="clean-build">
+	<property environment="env" />
+	<!-- for reading environnement variables -->
+	<property name="src.dir" value="src" />
+	<property name="classes.dir" value="bin" />
+	<property name="resources.dir" value="${src.dir}/ressources" />
+	<property name="projet.classpath" value="" />
+
+	<!-- read property from env-->
+	<property name="jar.dir" value="${env.destinationJar}" />
+	<property name="api.name" value="${env.nameApi}" />
+	<property name="jar.name" value="${env.namejar}" />
+	<property name="shared_lib.name" value="${env.sharedLibName}" />
+	<property name="output.jar.name" value="${jar.name}.jar" />
+
+	<!-- Create property file to store the native library name to load -->
+	<propertyfile file="${resources.dir}/${api.name}.properties">
+		<entry key="shared_lib.name" value="${shared_lib.name}" />
+	</propertyfile>
+
+	<!-- Debug message -->
+	<echo message="Classpath = ${projet.classpath}" />
+
+	<!-- Path definition -->
+	<path id="path.projet.classpath">
+		<fileset dir="${projet.classpath}" includes="**/*.jar" />
+	</path>
+
+	<!-- Targets -->
+	<target name="clean">
+		<delete dir="${classes.dir}" />
+		<delete dir="${jar.dir}" />
+	</target>
+
+	<target name="compile">
+		<mkdir dir="${classes.dir}" />
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="path.projet.classpath" />
+	</target>
+
+	<target name="jar" depends="compile">
+		<mkdir dir="${jar.dir}" />
+		<jar destfile="${jar.dir}/${output.jar.name}" basedir="${classes.dir}">
+			<zipfileset dir="${resources.dir}" prefix="ressources" /> 
+		</jar>
+		<delete dir="${classes.dir}" />
+	</target>
+
+	<target name="clean-build" depends="clean,jar" />
+
+</project>

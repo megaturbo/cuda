@@ -1,0 +1,20 @@
+#include "Fractal.h"
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+Fractal::Fractal(uint n)
+{
+	this->n = n;
+}
+
+Fractal::~Fractal(void)
+{
+}
+
+bool isDivergent(float zr, float zi)
+{
+	return sqrtf(zr * zr + zi * zi) > 2.0;
+}
+
+

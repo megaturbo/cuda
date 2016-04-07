@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Default C source template" key="LastUsedSourceTemplate"/>
+	<item value="Default C++ header template" key="LastUsedHeaderTemplate"/>
+	<item value="G:\CBI\HEARC\SoftLocal\Eclipse" key="org.eclipse.cdt.ui.codeformatter.savepath.loadpath"/>
+	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
+		<item value="450" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="488" key="DIALOG_HEIGHT"/>
+		<item value="455" key="DIALOG_Y_ORIGIN"/>
+		<item value="1089" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.browser.opentype.OpenTypeActionSettings">
+		<item value="true" key="show_enums"/>
+		<item value="true" key="show_unions"/>
+		<item value="true" key="show_macros"/>
+		<item value="true" key="show_classes"/>
+		<item value="true" key="show_functions"/>
+		<item value="true" key="show_lowlevel"/>
+		<item value="true" key="show_namespaces"/>
+		<item value="false" key="show_enumerators"/>
+		<item value="true" key="show_structs"/>
+		<item value="565" key="width"/>
+		<item value="518" key="x"/>
+		<item value="85" key="y"/>
+		<item value="true" key="show_typedefs"/>
+		<item value="true" key="show_variables"/>
+		<item value="680" key="height"/>
+	</section>
+	<section name="PDOMSearchPage">
+		<item value="false" key="caseSensitive"/>
+		<item value="227191" key="searchFlags"/>
+		<list key="previousPatterns">
+			<item value="ParallelPatern"/>
+			<item value="LaunchMode"/>
+			<item value="DomaineMathh"/>
+			<item value="CXXFLAGS_EXCLUDE"/>
+			<item value="Options"/>
+			<item value="Settings"/>
+			<item value="Optionh"/>
+			<item value="checkKernelError"/>
+			<item value="Option"/>
+			<item value="ici1"/>
+			<item value="Chronos"/>
+			<item value="keypointExtractionOut"/>
+			<item value="KeypointExtractionOut"/>
+			<item value="X11"/>
+			<item value="launchKernelFillImageRippling"/>
+			<item value="Rippling4"/>
+			<item value="rippling4"/>
+			<item value="ChronoOMPsh"/>
+			<item value="ChronoOMPs"/>
+			<item value="matrixToolsh"/>
+			<item value="lock"/>
+			<item value="isNormeOk"/>
+		</list>
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="false" key="stubSelected1"/>
+		<item value="true" key="stubVirtual1"/>
+		<item value="true" key="namespaceSelected"/>
+		<item value="false" key="stubInline0"/>
+		<item value="false" key="stubInline1"/>
+		<item value="q" key="namespace"/>
+		<item value="false" key="testFileSelected"/>
+		<item value="false" key="stubSelected0"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.preferences.EditTemplateDialog_dialogBounds">
+		<item value="598" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="352" key="DIALOG_HEIGHT"/>
+		<item value="312" key="DIALOG_Y_ORIGIN"/>
+		<item value="509" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item value="0" key="askReindex.detail"/>
+		<item value="true" key="askReindex"/>
+	</section>
+	<section name="CRenameRefactoringInputPage">
+		<item value="5" key="scope"/>
+		<item value="false" key="comment"/>
+		<item value="false" key="references_inv"/>
+		<item value="" key="workingset"/>
+		<item value="false" key="macroDefinition"/>
+	</section>
+	<section name="completion_proposal_size">
+		<item value="1518" key="size.y"/>
+		<item value="355" key="size.x"/>
+	</section>
+</section>

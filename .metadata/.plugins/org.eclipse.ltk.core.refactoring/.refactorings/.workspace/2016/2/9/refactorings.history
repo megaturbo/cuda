@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Student_OMP_Image/src/core/02_Mandelbrot_Julia/a_animable/math/MandelbrotMath.cpp&apos;" deleteContents="false" description="Delete resource &apos;Student_OMP_Image/src/core/02_Mandelbrot_Julia/a_animable/math/MandelbrotMath.cpp&apos;" element1="/Student_OMP_Image/src/core/02_Mandelbrot_Julia/a_animable/math/MandelbrotMath.cpp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1456406937059"/>
+</session>

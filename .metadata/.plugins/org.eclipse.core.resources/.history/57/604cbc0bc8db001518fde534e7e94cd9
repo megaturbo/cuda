@@ -1,0 +1,80 @@
+#pragma once
+
+#include <math.h>
+#include "MathTools.h"
+
+#include "Calibreur_CPU.h"
+#include "ColorTools_CPU.h"
+using namespace cpu;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*				Public					*|
+ \*-------------------------------------*/
+
+class MandelbrotMath
+{
+	/*--------------------------------------*\
+	|*				Constructeur			*|
+	 \*-------------------------------------*/
+
+public:
+
+	MandelbrotMath(uint w, uint h)
+	{
+		this->W = w;
+		this->H = h;
+	}
+
+	// constructeur copie: pas besoin car pas attribut ptr
+
+	virtual ~RipplingMath(void)
+	{
+		// rien
+	}
+
+	/*--------------------------------------*\
+	|*				Methode					*|
+	 \*-------------------------------------*/
+
+public:
+
+	void colorXY(uchar4* ptrColor, int x, int y)
+	{
+		float z = f(x, y);
+
+		f(i, j, t, &color);
+
+		ptrColorIJ->x = color.x;
+		ptrColorIJ->y = color.y;
+		ptrColorIJ->z = color.z;
+
+		ptrColorIJ->w = 255; //opaque
+	}
+
+private:
+
+	void f(int i, int j, float t, uchar4* ptrColor)
+	{
+
+	}
+
+	/*--------------------------------------*\
+	|*		Attribut			*|
+	 \*-------------------------------------*/
+
+private:
+
+// Tools
+	int H;
+	int W;
+	Calibreur<float> calibreur;
+
+};
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

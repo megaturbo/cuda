@@ -1,0 +1,160 @@
+15:51:18 **** Build of configuration MinGW_parallel for project BilatUtil_CPP ****
+Info: Configuration "MinGW_parallel" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+makeMinGW.bat jall 
+init make
+init API-EXT
+init API-CBI
+
+[MINGW] : jall  
+
+Set MinGW environement x64
+ 
+g++ (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 5.3.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+==================================================================================
+[CBI] -> Target Name  : BilatUtil_CPP_mingw_64
+[CBI] ->
+[CBI] -> Build     	  : Q:/cedric.bilat/Targets/BilatUtil_CPP/bin/BilatUtil_CPP_mingw_64.exe
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../BilatTools_CPP/src/core
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/LIB_STATIC/mingw
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fgcse
+[CBI] ->              : -fomit-frame-pointer
+[CBI] ->              : -fopenmp
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -march=native
+[CBI] ->              : -std=c++11
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/namespace_cpu/
+[CBI] ->              : src/core/utils/header/
+[CBI] ->              : src/test/header/
+
+[CBI] -> LIB_PATH (auto detect):
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/LIB_STATIC/mingw/
+
+[CBI] -> API_INC :
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/INC
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/INC/extension
+
+[CBI] -> API_LIB :
+
+[CBI] -> API_BIN :
+
+[CBI] -> API_LIBRARIES :
+
+[CBI] -> Create folder : Q:/cedric.bilat/Targets/BilatUtil_CPP/bin
+[CBI] -> Create folder : Q:/cedric.bilat/Targets/BilatUtil_CPP/obj
+
+[CBI] -> Compilation parallel (6 threads)
+
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : src/main.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : src/core/utils/cpp/vectorTools.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : src/core/utils/cpp/tab1DTools.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : src/core/utils/cpp/histo.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : src/core/utils/cpp/rawMajorTools.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : src/core/utils/cpp/tab2DTools.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : src/test/mainTest.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : src/test/cpp/TestTab2DJunit.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/StringTools.cpp
+In file included from c:/Soft_API/ext/CppTest/112/INC/cpptest.h:34:0,
+                 from c:/Soft_API/ext/CppTest/112/INC/extension/cppTest+.h:5,
+                 from src/test/mainTest.cpp:4:
+c:/Soft_API/ext/CppTest/112/INC/cpptest-suite.h:58:17: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+   void add(std::auto_ptr<Suite> suite);
+                 ^
+In file included from c:/Soft_DEV/MinGW64/x86_64-w64-mingw32/include/c++/memory:81:0,
+                 from c:/Soft_API/ext/CppTest/112/INC/cpptest-suite.h:33,
+                 from c:/Soft_API/ext/CppTest/112/INC/cpptest.h:34,
+                 from c:/Soft_API/ext/CppTest/112/INC/extension/cppTest+.h:5,
+                 from src/test/mainTest.cpp:4:
+c:/Soft_DEV/MinGW64/x86_64-w64-mingw32/include/c++/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+src/test/mainTest.cpp: In function 'bool testALL()':
+src/test/mainTest.cpp:46:24: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     testSuite.add(std::auto_ptr<Test::Suite>(new TestTab2DJunit()));
+                        ^
+In file included from c:/Soft_DEV/MinGW64/x86_64-w64-mingw32/include/c++/memory:81:0,
+                 from c:/Soft_API/ext/CppTest/112/INC/cpptest-suite.h:33,
+                 from c:/Soft_API/ext/CppTest/112/INC/cpptest.h:34,
+                 from c:/Soft_API/ext/CppTest/112/INC/extension/cppTest+.h:5,
+                 from src/test/mainTest.cpp:4:
+c:/Soft_DEV/MinGW64/x86_64-w64-mingw32/include/c++/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Progress.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Fps.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/TabTools.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Chrono.cpp
+In file included from c:/Soft_API/ext/CppTest/112/INC/cpptest.h:34:0,
+                 from src/test/header/TestTab2Dunit.h:3,
+                 from src/test/cpp/TestTab2DJunit.cpp:1:
+c:/Soft_API/ext/CppTest/112/INC/cpptest-suite.h:58:17: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+   void add(std::auto_ptr<Suite> suite);
+                 ^
+In file included from c:/Soft_DEV/MinGW64/x86_64-w64-mingw32/include/c++/memory:81:0,
+                 from c:/Soft_API/ext/CppTest/112/INC/cpptest-suite.h:33,
+                 from c:/Soft_API/ext/CppTest/112/INC/cpptest.h:34,
+                 from src/test/header/TestTab2Dunit.h:3,
+                 from src/test/cpp/TestTab2DJunit.cpp:1:
+c:/Soft_DEV/MinGW64/x86_64-w64-mingw32/include/c++/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/AleaTools.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/LimitsTools.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/MathTools.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/IndiceTools_CPU.cpp
+[BilatUtil_CPP_mingw_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/ColorTools_CPU.cpp
+
+[CBI] -> Linking to   : Q:/cedric.bilat/Targets/BilatUtil_CPP/bin/BilatUtil_CPP_mingw_64.exe
+
+[CBI] -> Library Link :
+[CBI] ->              : -lCpp_Test_mingw_64
+[CBI] ->              : -lgomp
+
+==================================================================================
+[CBI] -> Target Name  : BilatUtil_CPP_mingw_64
+[CBI] -> Location     : Q:/cedric.bilat/Targets/BilatUtil_CPP/bin/BilatUtil_CPP_mingw_64.exe
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Compilateur  : MINGW (g++)
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 2 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/BilatUtil_CPP_mingw_64.exe
+
+[CBI] -> BilatUtil_CPP_mingw_64 : End ALL!
+
+
+15:51:22 Build Finished (took 4s.29ms)
+

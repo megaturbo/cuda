@@ -1,0 +1,171 @@
+09:30:43 **** Build of configuration GCC_parallel for project Tuto_Boost ****
+makeGCC.sh jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+[Runtime] : Cuda  : /usr/local/cuda/lib64
+[Runtime] : Cula  : /usr/local/cula/lib64
+[Runtime] : MKL   : /opt/intel/mkl/lib/intel64
+
+[Runtime] : GL/GLEW/GLU
+[Runtime] : FreeGlut
+[Runtime] : Java (JNI)
+[Runtime] : X11
+
+[Runtime] : BOOST   : /opt/api/ext/boost/[user-version]/lib/gcc
+[Runtime] : OpenCV  : /opt/api/ext/opencv/[user-version]/lib
+[Runtime] : CppTest : /opt/api/ext/cpptest/[user-version]/LIB-STATIC/gcc
+
+[Runtime] : bilat_tools
+[Runtime] : bilat_fenetrage
+[Runtime] : bilat_opengl
+[Runtime] : bilat_image
+[Runtime] : bilat_graphe2d
+[Runtime] : bilat_multicourbe_cuda
+[Runtime] : bilat_surface
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 4.8.4-2ubuntu1~14.04) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+[Make] : GCC : jall
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Boost_gcc_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/Tuto_Boost/bin/Tuto_Boost_gcc_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : /opt/api/ext/boost/158/lib_static/gcc
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fomit-frame-pointer
+[CBI] ->              : -fopenmp
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -march=native
+[CBI] ->              : -std=c++11
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/cpp/core/boost/synchronization/
+[CBI] ->              : src/cpp/core/boost/thread/
+[CBI] ->              : src/cpp/core/std/synchronization/
+[CBI] ->              : src/cpp/core/std/thread/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/ext/boost/158/include
+
+[CBI] -> API_LIB :
+
+[CBI] -> API_BIN :
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : pthread
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_Boost/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_Boost/obj
+
+[CBI] -> Compilation parallel (12 threads)
+
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/main.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/std/mainStd.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/std/thread/01_thread_std_procedure.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/std/thread/02_thread_std_procedure_args.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/std/thread/03_thread_std_objet.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/std/thread/04_thread_std_objet_methode.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/std/thread/useStdThread.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/std/synchronization/useStdSynchronization.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/boost/mainBoost.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/boost/thread/01_thread_procedure.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/boost/thread/02_thread_procedure_args.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/boost/thread/03_thread_objet.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/boost/thread/04_thread_objet_methode.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/boost/thread/useThread.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/boost/options/useOptions.cpp
+[Tuto_Boost_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/boost/synchronization/useSynchronization.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/Tuto_Boost/bin/Tuto_Boost_gcc_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->              : -lboost_atomic-gcc48
+[CBI] ->              : -lboost_chrono-gcc48
+[CBI] ->              : -lboost_container-gcc48
+[CBI] ->              : -lboost_context-gcc48
+[CBI] ->              : -lboost_coroutine-gcc48
+[CBI] ->              : -lboost_date_time-gcc48
+[CBI] ->              : -lboost_exception-gcc48
+[CBI] ->              : -lboost_filesystem-gcc48
+[CBI] ->              : -lboost_graph-gcc48
+[CBI] ->              : -lboost_locale-gcc48
+[CBI] ->              : -lboost_log-gcc48
+[CBI] ->              : -lboost_log_setup-gcc48
+[CBI] ->              : -lboost_math_c99-gcc48
+[CBI] ->              : -lboost_math_c99f-gcc48
+[CBI] ->              : -lboost_math_c99l-gcc48
+[CBI] ->              : -lboost_math_tr1-gcc48
+[CBI] ->              : -lboost_math_tr1f-gcc48
+[CBI] ->              : -lboost_math_tr1l-gcc48
+[CBI] ->              : -lboost_prg_exec_monitor-gcc48
+[CBI] ->              : -lboost_program_options-gcc48
+[CBI] ->              : -lboost_random-gcc48
+[CBI] ->              : -lboost_regex-gcc48
+[CBI] ->              : -lboost_serialization-gcc48
+[CBI] ->              : -lboost_signals-gcc48
+[CBI] ->              : -lboost_system-gcc48
+[CBI] ->              : -lboost_test_exec_monitor-gcc48
+[CBI] ->              : -lboost_thread-gcc48
+[CBI] ->              : -lboost_timer-gcc48
+[CBI] ->              : -lboost_unit_test_framework-gcc48
+[CBI] ->              : -lboost_wave-gcc48
+[CBI] ->              : -lboost_wserialization-gcc48
+[CBI] ->              : -lgomp
+[CBI] ->              : -lpthread
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Boost_gcc_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/Tuto_Boost/bin/Tuto_Boost_gcc_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++ (g++)
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 4 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/Tuto_Boost_gcc_x86_64.run
+
+[CBI] -> Tuto_Boost_gcc_x86_64 : End ALL!
+
+
+09:30:47 Build Finished (took 4s.423ms)
+

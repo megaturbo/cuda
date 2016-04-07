@@ -1,0 +1,96 @@
+15:05:05 **** Build of configuration Visual_parallel for project BilatTools_OMP ****
+Info: Configuration "Visual_parallel" uses tool-chain "cdt.managedbuild.toolchain.gnu.mingw.base" that is unsupported on this system, attempting to build anyway.
+makeVisual.bat jall 
+init make
+init API-EXT
+init API-CBI
+
+[VISUAL] : jall  
+
+
+Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30501 for x64
+usage: cl [ option... ] filename... [ /link linkoption... ]
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_OMP_visual_64
+[CBI] ->
+[CBI] -> Build     	  : Q:/cedric.bilat/Targets/BilatTools_OMP/bin/BilatTools_OMP_visual_64.dll
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /EHsc
+[CBI] ->              : /MD
+[CBI] ->              : /Ox
+[CBI] ->              : /arch:AVX
+[CBI] ->              : /nologo
+[CBI] ->              : /openmp
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /DLL
+[CBI] ->              : /link
+[CBI] ->              : /nologo
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/core/OMP_Tools/header/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+
+[CBI] -> API_LIB :
+
+[CBI] -> API_BIN :
+
+[CBI] -> API_LIBRARIES :
+
+[CBI] -> Create folder : Q:/cedric.bilat/Targets/BilatTools_OMP/bin
+[CBI] -> Create folder : Q:/cedric.bilat/Targets/BilatTools_OMP/obj
+
+[CBI] -> Compilation parallel (6 threads)
+
+OmpTools.cpp
+
+[BilatTools_OMP_visual_64] -> Linking to   : Q:/cedric.bilat/Targets/BilatTools_OMP/bin/BilatTools_OMP_visual_64.dll
+
+[BilatTools_OMP_visual_64] -> Library Link :
+
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_OMP_visual_64
+[CBI] -> Location     : Q:/cedric.bilat/Targets/BilatTools_OMP/bin/BilatTools_OMP_visual_64.dll
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Compilateur  : VISUAL (cl)
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 1 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/BilatTools_OMP_visual_64.dll
+
+[CBI] -> BilatTools_OMP_visual_64 : End ALL!
+
+
+15:05:08 Build Finished (took 2s.567ms)
+

@@ -1,0 +1,221 @@
+15:45:28 **** Incremental Build of configuration CudaVisual_parallel for project Tuto_MultiCourbes_Cuda ****
+makeCudaVisual.bat jall 
+init make
+init API-EXT
+init API-CBI
+
+[CUDA VISUAL] : jall  
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2015 NVIDIA Corporation
+Built on Tue_Aug_11_14:49:10_CDT_2015
+Cuda compilation tools, release 7.5, V7.5.17
+
+Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30501 for x64
+usage: cl [ option... ] filename... [ /link linkoption... ]
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Cuda_MultiCourbes_visual_cuda_75_64
+[CBI] ->
+[CBI] -> Build        : Q:/cedric.bilat/Targets/Tuto_Cuda_MultiCourbes/bin/Tuto_Cuda_MultiCourbes_visual_cuda_75_64.exe
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : EXE
+[CBI] -> Arch	      : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../BilatTools_CPP/src/core
+[CBI] ->              : ../BilatTools_Cuda/src/core
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable/LIB/visual
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/LIB/visual
+[CBI] ->              : c:/Soft_API/CBI/opengl/201/Bilat_OpenGL_Tools/LIB/visual
+[CBI] ->              : c:/Soft_API/CBI/multicourbes/201/Bilat_MultiCourbes_GL_Cuda/LIB/visual_cuda
+[CBI] ->              : c:/Soft_API/CBI/multicourbes/201/Bilat_MultiCourbes_FreeGlut_Cuda/LIB/visual_cuda
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /openmp
+[CBI] ->              : /MD
+[CBI] ->              : /Ox
+[CBI] ->              : /arch:AVX
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /NODEFAULTLIB:LIBCMT
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_20
+[CBI] ->              : -m64
+[CBI] ->              : -use_fast_math
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_20
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/namespace_cpu/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/both/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/curand/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/reduction/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/synchronisation/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/host/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/mixte/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/nvidia/
+[CBI] ->              : src/cpp/core/01_warm_up/
+[CBI] ->              : src/cpp/core/01_warm_up/01_MultiCourbe_API/
+[CBI] ->              : src/cpp/core/01_warm_up/02_cuda/host/
+[CBI] ->              : src/cpp/core/01_warm_up/03_math/
+
+[CBI] -> LIB_PATH (auto detect):
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable/LIB/visual/
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/LIB/visual/
+[CBI] ->              : c:/Soft_API/CBI/multicourbes/201/Bilat_MultiCourbes_FreeGlut_Cuda/LIB/visual_cuda/
+[CBI] ->              : c:/Soft_API/CBI/multicourbes/201/Bilat_MultiCourbes_GL_Cuda/LIB/visual_cuda/
+[CBI] ->              : c:/Soft_API/CBI/opengl/201/Bilat_OpenGL_Tools/LIB/visual/
+
+[CBI] -> API_INC :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/include
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/INC
+[CBI] ->              : c:/Soft_API/CBI/multicourbes/201/Bilat_MultiCourbes_FreeGlut_Cuda/INC
+[CBI] ->              : c:/Soft_API/CBI/multicourbes/201/Bilat_MultiCourbes_GL_Cuda/INC
+[CBI] ->              : c:/Soft_API/CBI/opengl/201/Bilat_OpenGL_Tools/INC
+[CBI] ->              : c:/Soft_API/CBI/tools/201/dll/INC
+[CBI] ->              : c:/Soft_API/ext/FreeGlut/300/INC
+[CBI] ->              : c:/Soft_API/ext/GL/001/INC
+
+[CBI] -> API_LIB :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/lib/x64
+[CBI] ->              : c:/Soft_API/ext/FreeGlut/300/LIB/visual
+[CBI] ->              : c:/Soft_API/ext/GL/001/LIB/visual
+
+[CBI] -> API_BIN :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/bin
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/lib/x64
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable/BIN/visual
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/BIN/visual
+[CBI] ->              : c:/Soft_API/CBI/multicourbes/201/Bilat_MultiCourbes_FreeGlut_Cuda/BIN/visual_cuda
+[CBI] ->              : c:/Soft_API/CBI/multicourbes/201/Bilat_MultiCourbes_GL_Cuda/BIN/visual_cuda
+[CBI] ->              : c:/Soft_API/CBI/opengl/201/Bilat_OpenGL_Tools/BIN/visual
+[CBI] ->              : c:/Soft_API/ext/FreeGlut/300/BIN/visual
+[CBI] ->              : c:/Soft_API/ext/GL/001/BIN/visual
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : OpenCL
+[CBI] ->              : cublas
+[CBI] ->              : cuda
+[CBI] ->              : cudadevrt
+[CBI] ->              : cudart
+[CBI] ->              : cudart_static
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : curand
+[CBI] ->              : cusparse
+[CBI] ->              : freeglut64_visual
+[CBI] ->              : gdi32
+[CBI] ->              : glew64
+[CBI] ->              : glu32
+[CBI] ->              : kernel32
+[CBI] ->              : nppc
+[CBI] ->              : nppi
+[CBI] ->              : npps
+[CBI] ->              : nvblas
+[CBI] ->              : nvcuvid
+[CBI] ->              : opengl32
+[CBI] ->              : user32
+
+
+[CBI] -> Compilation parallel (6 threads)
+
+DataProviderSample.cu
+
+[CBI] -> Linking to   : Q:/cedric.bilat/Targets/Tuto_Cuda_MultiCourbes/bin/Tuto_Cuda_MultiCourbes_visual_cuda_75_64.exe
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lBilat_Fenetrage_Displayable_201_visual_64
+[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_201_visual_64
+[CBI] ->              : -lBilat_MultiCourbes_FreeGlut_Cuda_201_visual_cuda_75_64
+[CBI] ->              : -lBilat_MultiCourbes_GL_Cuda_201_visual_cuda_75_64
+[CBI] ->              : -lBilat_OpenGL_Tools_201_visual_64
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcuda
+[CBI] ->              : -lcudadevrt
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcudart_static
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusparse
+[CBI] ->              : -lfreeglut64_visual
+[CBI] ->              : -lgdi32
+[CBI] ->              : -lglew64
+[CBI] ->              : -lglu32
+[CBI] ->              : -lkernel32
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppi
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvblas
+[CBI] ->              : -lnvcuvid
+[CBI] ->              : -lopengl32
+[CBI] ->              : -luser32
+
+main.obj
+mainCore.obj
+ProviderMultiCourbeMOO.obj
+MultiCourbesSampleMOO.obj
+StringTools.obj
+Progress.obj
+Fps.obj
+TabTools.obj
+Chrono.obj
+AleaTools.obj
+LimitsTools.obj
+MathTools.obj
+IndiceTools_CPU.obj
+ColorTools_CPU.obj
+cudaTools.obj
+Grid.obj
+Device.obj
+DataProviderSampleKernel.obj
+DataProviderSample.obj
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Cuda_MultiCourbes_visual_cuda_75_64
+[CBI] -> Location     : Q:/cedric.bilat/Targets/Tuto_Cuda_MultiCourbes/bin/Tuto_Cuda_MultiCourbes_visual_cuda_75_64.exe
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 	      : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Compilateur  : VISUAL (cl) && NVIDIA (nvcc)
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 7 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/Tuto_Cuda_MultiCourbes_visual_cuda_75_64.exe
+
+[CBI] -> Tuto_Cuda_MultiCourbes_visual_cuda_75_64 : End ALL!
+
+
+15:45:40 Build Finished (took 11s.637ms)
+

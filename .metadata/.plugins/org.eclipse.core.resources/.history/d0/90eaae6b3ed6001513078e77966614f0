@@ -1,0 +1,69 @@
+#include <omp.h>
+#include "OmpTools.h"
+#include "../02_Slice/00_pi_tools.h"
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+bool isPiOMPEntrelacerPromotionTab_Ok(int n);
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+static double piOMPEntrelacerPromotionTab(int n);
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+bool isPiOMPEntrelacerPromotionTab_Ok(int n)
+    {
+    return isAlgoPI_OK(piOMPEntrelacerPromotionTab,  n, "Pi OMP Entrelacer promotionTab");
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/**
+ * pattern cuda : excellent!
+ */
+double piOMPEntrelacerPromotionTab(int n)
+    {
+    const int NB_THREAD = OmpTools::setAndGetNaturalGranularity();
+
+#pragma omp parallel
+    {
+	const int TID OmpTools::getTid();
+
+    }
+
+    const double DX = 1 / (double) n;
+    double xi;
+    double sum = 0;
+    for (int i = 0; i < n; i++)
+	{
+	sum += fpi(i * DX);
+	}
+    return sum / n;
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

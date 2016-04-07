@@ -1,0 +1,127 @@
+#include "Fractal.h"
+
+#include <iostream>
+#include <omp.h>
+#include "OmpTools.h"
+
+#include "IndiceTools_CPU.h"
+using cpu::IndiceTools;
+
+using std::cout;
+using std::endl;
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+Mandelbrot::Mandelbrot(uint w, uint h, float dt, uint n, const DomaineMath& domaineMath) :
+		Animable_I<uchar4>(w, h, "Mandelbrot_OMP_rgba_uchar4", domaineMath), variateurAnimation(Interval<float>(0, 2 * PI), dt)
+{
+	this->n = n;
+
+	this->t = 0;
+	this->parallelPatern = ParallelPatern::OMP_MIXTE;
+
+	cout << "\n[Mandelbrot] : OMP : nbThread = " << this->nbThread << endl; // protected dans super classe Animable
+}
+
+Mandelbrot::~Mandelbrot(void)
+{
+
+}
+
+bool isDivergent(float zr, float zi)
+{
+	return sqrtf(zr * zr + zi * zi) > 2.0;
+}
+
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+void Mandelbrot::processForAutoOMP(uchar4* ptrTabPixels, uint w, uint h,
+		const DomaineMath& domaineMath)
+{
+	MandelbrotMath mandelbrotMath(n); // ici pour preparer cuda
+
+#pragma omp parallel for
+	for (int i = 0; i < h; i++)
+	{
+		for (int j = 0; j < w; j++)
+		{
+			// int s = i * W + j;
+			int s = IndiceTools::toS(w, i, j);    // i[0,H[ j[0,W[  --> s[0,W*H[
+
+			workPixel(&ptrTabPixels[s], i, j, domaineMath, &mandelbrotMath);
+		}
+	}
+}
+
+/**
+ * Override (code entrainement cuda)
+ */
+void Mandelbrot::processEntrelacementOMP(uchar4* ptrTabPixels, uint w, uint h,
+		const DomaineMath& domaineMath)
+{
+	MandelbrotMath mandelbrotMath(n); // ici pour preparer cuda
+
+	const int WH = w * h;
+
+#pragma omp parallel
+	{
+		const int NB_THREAD = OmpTools::getNbThread(); // dans region parallel
+
+		const int TID = OmpTools::getTid();
+		int s = TID; // in [0,...
+
+		int i;
+		int j;
+		while (s < WH)
+		{
+			IndiceTools::toIJ(s, w, &i, &j); // s[0,W*H[ --> i[0,H[ j[0,W[
+
+			workPixel(&ptrTabPixels[s], i, j, domaineMath, &mandelbrotMath);
+
+			s += NB_THREAD;
+		}
+	}
+}
+
+void Mandelbrot::animationStep()
+{
+    this->t = variateurAnimation.varierAndGet();
+}
+
+void Mandelbrot::workPixel(uchar4* ptrColorIJ, int i, int j,
+		const DomaineMath& domaineMath, MandelbrotMath* ptrMandelbrotMath)
+{
+	// (i,j) domaine ecran dans N2
+	// (x,y) domaine math dans R2
+
+	double x;
+	double y;
+	domaineMath.toXY(i, j, &x, &y); // fill (x,y) from (i,j)
+
+	// float t=variateurAnimation.get();
+
+	ptrMandelbrotMath->colorXY(ptrColorIJ, x, y); // in [01]
+}
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

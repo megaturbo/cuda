@@ -1,0 +1,107 @@
+15:50:54 **** Build of configuration IntelWin for project BilatTools_Intel_MKL ****
+Info: Configuration "IntelWin" uses tool-chain "cdt.managedbuild.toolchain.gnu.mingw.base" that is unsupported on this system, attempting to build anyway.
+makeIntelWin.bat all 
+init make
+init API-EXT
+init API-CBI
+
+[INTEL] : all  
+
+Copyright (C) 1985-2015 Intel Corporation. All rights reserved.
+Intel(R) Compiler 16.0 Update 1 (package 146)
+ 
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_MKL_intel_64
+[CBI] ->
+[CBI] -> Build     	  : Q:/cedric.bilat/Targets/BilatTools_MKL/bin/BilatTools_MKL_intel_64.exe
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../BilatTools_CPP/src/core
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /EHsc
+[CBI] ->              : /MD
+[CBI] ->              : /O3
+[CBI] ->              : /Qmkl
+[CBI] ->              : /Qopenmp
+[CBI] ->              : /Qpar-threshold100
+[CBI] ->              : /Qparallel
+[CBI] ->              : /QxHost
+[CBI] ->              : /fast
+[CBI] ->              : /nologo
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /link
+[CBI] ->              : /nologo
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/namespace_cpu/
+[CBI] ->              : src/core/mklTools/header/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+
+[CBI] -> API_LIB :
+
+[CBI] -> API_BIN :
+
+[CBI] -> API_LIBRARIES :
+
+[CBI] -> Create folder : Q:/cedric.bilat/Targets/BilatTools_MKL/bin
+[CBI] -> Create folder : Q:/cedric.bilat/Targets/BilatTools_MKL/obj
+
+MKL.cpp
+main.cpp
+StringTools.cpp
+Progress.cpp
+Fps.cpp
+TabTools.cpp
+Chrono.cpp
+AleaTools.cpp
+LimitsTools.cpp
+MathTools.cpp
+IndiceTools_CPU.cpp
+ColorTools_CPU.cpp
+
+[CBI] -> Linking to   : Q:/cedric.bilat/Targets/BilatTools_MKL/bin/BilatTools_MKL_intel_64.exe
+
+[CBI] -> Library Link :
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_MKL_intel_64
+[CBI] -> Location     : Q:/cedric.bilat/Targets/BilatTools_MKL/bin/BilatTools_MKL_intel_64.exe
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Compilateur  : INTEL (icl)
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 6 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/BilatTools_MKL_intel_64.exe
+
+[CBI] -> BilatTools_MKL_intel_64 : End ALL!
+
+
+15:51:02 Build Finished (took 7s.127ms)
+

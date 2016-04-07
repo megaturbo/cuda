@@ -1,0 +1,1537 @@
+11:33:40 **** Incremental Build of configuration IntelLinux_parallel for project Student_OMP_Image ****
+makeIntelLinux.sh jall 
+
+--------------------------------------------------------
+[Runtime] : intel x86
+--------------------------------------------------------
+
+[Runtime] : Cuda  : /usr/local/cuda/lib64
+[Runtime] : Cula  : /usr/local/cula/lib64
+[Runtime] : MKL   : /opt/intel/mkl/lib/intel64
+[Runtime] : Intel : /opt/intel
+
+[Runtime] : GL/GLEW/GLU
+[Runtime] : FreeGlut
+[Runtime] : Java (JNI)
+[Runtime] : X11
+
+[Runtime] : BOOST   : /opt/api/ext/boost/[user-version]/lib/intel
+[Runtime] : OpenCV  : /opt/api/ext/opencv/[user-version]/lib
+[Runtime] : CppTest : /opt/api/ext/cpptest/[user-version]/LIB-STATIC/intel
+[Runtime] : gphoto2  : /opt/api/ext/gphoto2/[user-version]/lib
+
+[Runtime] : bilat_tools
+[Runtime] : bilat_fenetrage
+[Runtime] : bilat_opengl
+[Runtime] : bilat_image
+[Runtime] : bilat_graphe2d
+[Runtime] : bilat_multicourbe_cuda
+[Runtime] : bilat_surface
+
+--------------------------------------------------------
+[Runtime] : intel x86 : Ready!
+--------------------------------------------------------
+
+
+[INTEL] : jall
+
+icpc (ICC) 15.0.3 20150407
+Copyright (C) 1985-2015 Intel Corporation.  All rights reserved.
+
+==================================================================================
+[CBI] -> Target Name  : Student_OMP_Image_intel_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/arc16/Targets/Student_OMP_Image/bin/Student_OMP_Image_intel_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : arc16
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../BilatTools_CPP/src/core
+[CBI] ->              : ../BilatTools_Image/src/core
+[CBI] ->              : ../BilatTools_OMP/src/core
+[CBI] ->              : ../BilatTools_OpenCV/src/core
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable/BIN/intel
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable_GL/BIN/intel
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/BIN/intel
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/BIN/intel
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/BIN/intel
+[CBI] ->              : /opt/api/cbi/opengl/201/Bilat_OpenGL_Tools/BIN/intel
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -axSSE4.2
+[CBI] ->              : -fast
+[CBI] ->              : -openmp
+[CBI] ->              : -par-threshold100
+[CBI] ->              : -parallel
+[CBI] ->              : -std=c++11
+[CBI] ->              : -w
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/namespace_cpu/
+[CBI] ->              : ../BilatTools_Image/src/core/tools/imp/
+[CBI] ->              : ../BilatTools_Image/src/core/tools/imp/api_animateur/
+[CBI] ->              : ../BilatTools_Image/src/core/tools/imp/api_image_link/
+[CBI] ->              : ../BilatTools_Image/src/core/tools/imp/api_viewer/
+[CBI] ->              : ../BilatTools_Image/src/core/tools/spec/
+[CBI] ->              : ../BilatTools_OMP/src/core/OMP_Tools/header/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/video/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/webcam/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/appearance/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/drawer/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewer/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewerMat/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/tools/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/tools/cpu/
+[CBI] ->              : src/core/01_Rippling/a_animable/
+[CBI] ->              : src/core/01_Rippling/a_animable/math/
+[CBI] ->              : src/core/01_Rippling/b_provider/
+[CBI] ->              : src/core/02_Mandelbrot_Julia/a_animable/
+[CBI] ->              : src/core/02_Mandelbrot_Julia/a_animable/math/
+[CBI] ->              : src/core/02_Mandelbrot_Julia/b_provider/
+
+[CBI] -> LIB_PATH (auto detect):
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable/BIN/intel/
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable_GL/BIN/intel/
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/BIN/intel/
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/BIN/intel/
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/BIN/intel/
+[CBI] ->              : /opt/api/cbi/opengl/201/Bilat_OpenGL_Tools/BIN/intel/
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable_GL/INC
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable_GL/INC/primitives
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/INC
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/INC
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/INC/common
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/INC/cpu
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/INC
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/INC/common
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/INC/cpu
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/INC/extra
+[CBI] ->              : /opt/api/cbi/opengl/201/Bilat_OpenGL_Tools/INC
+[CBI] ->              : /opt/api/cbi/tools/201/Bilat_tools_dll/INC
+[CBI] ->              : /opt/api/ext/opencv/2411/include
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/calib3d
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/contrib
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/core
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/features2d
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/flann
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/gpu
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/highgui
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/imgproc
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/legacy
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/ml
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/nonfree
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/objdetect
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/ocl
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/photo
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/stitching
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/superres
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/ts
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/video
+[CBI] ->              : /opt/api/ext/opencv/2411/include/opencv2/videostab
+[CBI] ->              : /usr/include/X11
+
+[CBI] -> API_LIB :
+[CBI] ->              : /opt/api/ext/opencv/2411/lib
+[CBI] ->              : /usr/lib/x86_64-linux-gnu
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable/BIN/intel
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable_GL/BIN/intel
+[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/BIN/intel
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/BIN/intel
+[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/BIN/intel
+[CBI] ->              : /opt/api/cbi/opengl/201/Bilat_OpenGL_Tools/BIN/intel
+[CBI] ->              : /opt/api/ext/opencv/2411/lib
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : GL
+[CBI] ->              : GLEW
+[CBI] ->              : GLU
+[CBI] ->              : X11
+[CBI] ->              : opencv_calib3d_gcc48_cuda70
+[CBI] ->              : opencv_contrib_gcc48_cuda70
+[CBI] ->              : opencv_core_gcc48_cuda70
+[CBI] ->              : opencv_features2d_gcc48_cuda70
+[CBI] ->              : opencv_flann_gcc48_cuda70
+[CBI] ->              : opencv_gpu_gcc48_cuda70
+[CBI] ->              : opencv_highgui_gcc48_cuda70
+[CBI] ->              : opencv_imgproc_gcc48_cuda70
+[CBI] ->              : opencv_legacy_gcc48_cuda70
+[CBI] ->              : opencv_ml_gcc48_cuda70
+[CBI] ->              : opencv_nonfree_gcc48_cuda70
+[CBI] ->              : opencv_objdetect_gcc48_cuda70
+[CBI] ->              : opencv_ocl_gcc48_cuda70
+[CBI] ->              : opencv_photo_gcc48_cuda70
+[CBI] ->              : opencv_stitching_gcc48_cuda70
+[CBI] ->              : opencv_superres_gcc48_cuda70
+[CBI] ->              : opencv_video_gcc48_cuda70
+[CBI] ->              : opencv_videostab_gcc48_cuda70
+
+
+[CBI] -> Compilation parallel (12 threads)
+
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : src/core/02_Mandelbrot_Julia/b_provider/JuliaProvider.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/arc16/Targets/Student_OMP_Image/bin/Student_OMP_Image_intel_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->              : -L/usr/lib/x86_64-linux-gnu
+[CBI] ->              : -lBilat_Fenetrage_Displayable_201_intel_x86_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_201_intel_x86_64
+[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_201_intel_x86_64
+[CBI] ->              : -lBilat_Image_FreeGlut_201_intel_x86_64
+[CBI] ->              : -lBilat_Image_GL_201_intel_x86_64
+[CBI] ->              : -lBilat_OpenGL_Tools_201_intel_x86_64
+[CBI] ->              : -lGL
+[CBI] ->              : -lGLEW
+[CBI] ->              : -lGLU
+[CBI] ->              : -lX11
+[CBI] ->              : -lglut
+[CBI] ->              : -liomp5
+[CBI] ->              : -lopencv_calib3d_gcc48_cuda70
+[CBI] ->              : -lopencv_contrib_gcc48_cuda70
+[CBI] ->              : -lopencv_core_gcc48_cuda70
+[CBI] ->              : -lopencv_features2d_gcc48_cuda70
+[CBI] ->              : -lopencv_flann_gcc48_cuda70
+[CBI] ->              : -lopencv_gpu_gcc48_cuda70
+[CBI] ->              : -lopencv_highgui_gcc48_cuda70
+[CBI] ->              : -lopencv_imgproc_gcc48_cuda70
+[CBI] ->              : -lopencv_legacy_gcc48_cuda70
+[CBI] ->              : -lopencv_ml_gcc48_cuda70
+[CBI] ->              : -lopencv_nonfree_gcc48_cuda70
+[CBI] ->              : -lopencv_objdetect_gcc48_cuda70
+[CBI] ->              : -lopencv_ocl_gcc48_cuda70
+[CBI] ->              : -lopencv_photo_gcc48_cuda70
+[CBI] ->              : -lopencv_stitching_gcc48_cuda70
+[CBI] ->              : -lopencv_superres_gcc48_cuda70
+[CBI] ->              : -lopencv_video_gcc48_cuda70
+[CBI] ->              : -lopencv_videostab_gcc48_cuda70
+ipo: warning #11021: unresolved XF86VidModeGetViewPort
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XF86VidModeGetModeLine
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XISelectEvents
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XF86VidModeGetAllModeLines
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XF86VidModeSetViewPort
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XF86VidModeSwitchToMode
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved XF86VidModeQueryExtension
+        Referenced in /usr/lib/x86_64-linux-gnu/libglut.so
+ipo: warning #11021: unresolved xcb_get_file_descriptor
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_connect
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_generate_id
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_connect_to_display_with_auth_info
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_writev
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_wait_for_reply
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_poll_for_event
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_get_maximum_request_length
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_poll_for_reply
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_take_socket
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_wait_for_event
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_disconnect
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_connection_has_error
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_get_setup
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved xcb_parse_display
+        Referenced in /usr/lib/x86_64-linux-gnu/libX11.so
+ipo: warning #11021: unresolved _nv024glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv020glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv023tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv008tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv024tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv018glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv007tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv006tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XextFindDisplay
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv022tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv009tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XextRemoveDisplay
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv021tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv020tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv023glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XextDestroyExtension
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv016glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv014glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv027glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XMissingExtension
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv015glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv014tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv015tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv016tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv019tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv000glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv018tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv017tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XextCreateExtension
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv011tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv001glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv013tls
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved XextAddDisplay
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved _nv017glcore
+        Referenced in /usr/lib/x86_64-linux-gnu/libGL.so
+ipo: warning #11021: unresolved gzeof
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaFree
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaDriverGetVersion
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved __cudaRegisterVar
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_superres_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved gzopen
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved gzclose
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved __cudaRegisterFunction
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_superres_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaGetLastError
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_superres_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved gzrewind
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemcpyToSymbol
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_superres_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaGetDevice
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaSetupArgument
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_superres_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaSetDoubleForDevice
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaConfigureCall
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_superres_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved __cudaUnregisterFatBinary
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_superres_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaGetErrorString
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_superres_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemcpy2D
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaRuntimeGetVersion
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaLaunch
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_superres_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaGetDeviceCount
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaGetDeviceProperties
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemGetInfo
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaSetDevice
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved __cudaRegisterFatBinary
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_superres_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaDeviceReset
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaDeviceSynchronize
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_superres_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved gzgets
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemset2D
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMallocPitch
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved gzputs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_core_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_16s_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemcpy2DAsync
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRangeGetBufferSize_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_8u_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSumWindowColumn_8u32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaFuncSetCacheConfig
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRangeGetBufferSize_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cufftPlan2d
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_16u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemcpyToSymbolAsync
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_32s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_32s_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaPeekAtLastError
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiXorC_16u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_8u_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiLShiftC_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_16u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_16s_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiXorC_32s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiNormDiff_Inf_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiLShiftC_16u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRange_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSumWindowRow_8u32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEven_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_32f_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiLShiftC_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRange_16s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_32s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaFreeHost
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiFilterColumn_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidParseVideoData
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_8u_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_8u_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaBindTexture2D
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_32s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGammaFwd_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cublasSetStream_v2
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRectStdDev_32s32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_32s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_32f_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cublasSetPointerMode_v2
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiEvenLevelsHost_32s
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_32s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaEventDestroy
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRange_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidCreateDecoder
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaThreadSynchronize
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiFilterMax_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMagnitudeSqr_32fc32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiFilterMin_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaDeviceGetAttribute
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_32s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAlphaComp_16u_AC4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaHostAlloc
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_8u_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaFuncGetAttributes
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiOrC_32s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAlphaPremul_8u_AC4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEven_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidCreateVideoSource
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaEventCreateWithFlags
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cublasCgemm_v2
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidCreateVideoParser
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiErode_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_8s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEvenGetBufferSize_16s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_32f_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGammaFwd_8u_AC4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGraphcut_32s8u
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGraphcutInitAlloc
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGammaFwd_8u_AC4IR
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_32s_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiLShiftC_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRotate_32f_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRotate_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_32s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_32f_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRotate_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_32f_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDilate_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEven_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAndC_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGammaInv_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiOrC_16u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemset2DAsync
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiLShiftC_32s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaDeviceSetSharedMemConfig
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMalloc
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemcpy
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_16u_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiNormDiffL2GetBufferHostSize_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiXorC_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cufftDestroy
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRangeGetBufferSize_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRotate_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGammaInv_8u_AC4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEvenGetBufferSize_16s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRange_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemcpyAsync
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_8s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_16u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_32f_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_32s_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiXorC_32s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_32s_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMallocHost
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaStreamWaitEvent
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGraphcutFree
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppSetStream
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppGetStream
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaStreamCreate
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_16s_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_8u_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_16s_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_32s_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_16s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiFilterBox_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAndC_32s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_16s_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_16s_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRotate_16u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaStreamQuery
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cublasZgemm_v2
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRangeGetBufferSize_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiLShiftC_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidSetVideoSourceState
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRange_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_32fc_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRange_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_16u_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidCtxLockCreate
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiOrC_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_32sc_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiLShiftC_32s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiFilterColumn_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_16u_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaUnbindTexture
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemset
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMagnitude_32fc32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_16sc_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiNormDiffInfGetBufferHostSize_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAlphaComp_8u_AC4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidCtxUnlock
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRotate_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_16s_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGraphcut8_32s8u
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEvenGetBufferSize_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMean_StdDev_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidGetSourceVideoFormat
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_16u_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRotate_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_32s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaGetSymbolAddress
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAlphaPremul_16u_AC4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAndC_32s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiFilterRow_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRangeGetBufferSize_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEvenGetBufferSize_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_16u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGraphcutGetSize
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiErode_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_8u_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGraphcut8GetSize
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cufftExecC2R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_32s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_8u_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidDestroyVideoSource
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiNormDiffL1GetBufferHostSize_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiLShiftC_32s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSwapChannels_8u_C4IR
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGammaInv_8u_C3IR
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidMapVideoFrame64
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaStreamSynchronize
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_8u_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaStreamAddCallback
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemcpyFromSymbolAsync
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cufftExecC2C
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cublasDestroy_v2
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiFilterMax_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_16s_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiNormDiff_L2_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cublasSgemm_v2
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEven_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_32s_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAlphaComp_32s_AC4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cufftExecR2C
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAndC_16u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiXorC_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_16sc_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiNormDiff_L1_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaBindTexture
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidDestroyDecoder
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved __cudaRegisterTexture
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGraphcut8InitAlloc
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_16s_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_16s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_8u_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_16u_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaHostUnregister
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRotate_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_16u_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAlphaComp_32f_AC4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEven_16s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_32f_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGammaFwd_8u_C3IR
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiThreshold_32f_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAndC_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_8u_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_8u_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_32s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaDeviceGetSharedMemConfig
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_16s_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEven_16s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_32s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_16u_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_16u_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidDecodePicture
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppsIntegral_32s
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaStreamDestroy
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppsIntegralGetBufferSize_32s
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaCreateChannelDesc
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_nonfree_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDilate_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_16s_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEvenGetBufferSize_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_16s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_32fc_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_16s_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiFilterRow_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cufftPlan1d
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiFilterMin_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiOrC_8u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cublasDgemm_v2
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGammaInv_8u_AC4IR
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_16u_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaMemsetAsync
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_32f_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_32s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_16u_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_32s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMeanStdDevGetBufferHostSize_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaCreateTextureObject
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_8s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_32s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspectiveBack_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMirror_16u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_32s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRangeGetBufferSize_16s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaDestroyTextureObject
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_16u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidCtxLock
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cufftSetStream
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRangeGetBufferSize_16s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaHostGetDevicePointer
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRotate_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffine_16u_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaHostRegister
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_32s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cublasCreate_v2
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRange_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiTranspose_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidGetVideoSourceState
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_8u_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiFilterBox_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpPerspective_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_16u_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGraphcut_32f8u
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiAddC_32sc_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRange_16s_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiDivC_32f_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiWarpAffineBack_32s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidUnmapVideoFrame64
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuCtxGetCurrent
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cudaEventRecord
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_32s_C3R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiLShiftC_16u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiOrC_32s_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_16u_C4RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramRangeGetBufferSize_32f_C4R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiHistogramEvenGetBufferSize_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiSubC_32s_C1RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved cuvidDestroyVideoParser
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiGraphcut8_32f8u
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiMulC_32s_C3RSfs
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved nppiRShiftC_8u_C1R
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_gpu_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_structure_get_fraction
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved deflateInit_
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_src_set_caps
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_time_val_add
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_link_many
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_widget_queue_draw
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_buffer_try_new_and_alloc
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_return_if_fail_warning
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_link
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_camera_enumerate
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_sink_set_max_buffers
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_capture_stop
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_query_duration
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved compress
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_get_image_size_from_video_mode
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_timeout_add
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved v4l2_munmap
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_object_get_name
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_error_free
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_feature_whitebalance_get_value
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_message_parse_state_changed
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_type_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_pad_link
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_object_unref
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_get_state
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_style_attach
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_widget_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_window_resize
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_set_state
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_cond_broadcast
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_video_get_supported_framerates
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_sink_is_eos
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved uncompress
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_filename_to_uri
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_type_check_instance_cast
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_usleep
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_get_current_time
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_bus_have_pending
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_factory_find
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_video_get_mode
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved deflate
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_window_set_geometry_hints
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_signal_connect_full
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gdk_draw_rgb_image
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_widget_queue_resize
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_video_set_mode
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_fraction_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_range_set_range
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_disable_setlocale
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_query_position
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_sink_set_caps
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_src_set_size
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_get_color_coding_bit_size
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved deflateEnd
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_camera_free
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_type_unique
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gdk_window_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_make_from_uri
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_strdup
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_video_set_transmission
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_uri_is_valid
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_range_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_bin_iterate_sinks
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_scale_set_digits
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_deinterlace_stereo
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_video_set_iso_speed
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_container_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_window_move
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved inflateSync
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_pad_get_caps
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_camera_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_widget_get_colormap
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_type_class
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_thread_self
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved inflate
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved v4l1_ioctl
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_capture_get_fileno
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved v4l1_mmap
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_structure_get_int
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_label_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_src_set_stream_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_iterator_free
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_cond_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_debayer_frames
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_iterator_next
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_window_set_title
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_container_add
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved inflateInit_
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_pipeline_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_encoding_video_profile_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_structure_remove_field
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_pad_unlink
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_box_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_free
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_signal_connect_data
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_vbox_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_set_control_registers
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_get_bus
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_caps_new_simple
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_widget_destroy
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved v4l1_open
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_unlink
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_box_pack_start
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_widget_get_visual
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_feature_get_all
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved inflateEnd
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_widget_add_events
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_video_set_operation_mode
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_sink_set_emit_signals
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved v4l2_mmap
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_iterator_resync
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_box_pack_end
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_range_set_value
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_bin_iterate_recurse
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_thread_create
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_caps_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_message_parse_stream_status
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_mutex_lock
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_sink_pull_buffer
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved v4l2_open
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_main_iteration_do
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_window_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_parse_launch
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_capture_dequeue
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_caps_unref
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_thread_yield
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_feature_set_value
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_free
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_get_color_coding_from_video_mode
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_capture_is_frame_corrupt
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_bin_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_scale_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gdk_window_move_resize
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_object_set
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_feature_get_value
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_mutex_unlock
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_mutex_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_range_get_value
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_mini_object_unref
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_message_parse_error
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_feature_set_mode
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved v4l1_munmap
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_init
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_convert_frames
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_type_check_instance_is_a
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_caps_from_string
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_feature_set_absolute_control
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_buffer_get_caps
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_feature_whitebalance_set_value
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_feature_set_power
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved inflateReset
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved v4l2_close
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved deflateReset
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_camera_free_list
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_riff_create_video_caps
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_window_set_resizable
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_object_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_sink_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_bus_pop
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_bin_add_many
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_capture_enqueue
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_widget_show
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_object_unref
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_caps_get_structure
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_src_end_of_stream
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_seek_simple
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_window_unfullscreen
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gdk_window_clear_area
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved v4l1_close
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_range_set_update_policy
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_video_format_new_caps
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gdk_window_set_user_data
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_scale_set_draw_value
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_video_set_framerate
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_bus_timed_pop_filtered
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_src_push_buffer
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_capture_setup
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved v4l2_ioctl
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_init
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_factory_make
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_get_static_pad
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_get_control_registers
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_pad_get_peer
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_cond_timed_wait
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_hbox_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved dc1394_video_get_supported_modes
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_encoding_container_profile_new
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_element_get_pad
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_is_missing_plugin_message
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_widget_get_events
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_window_fullscreen
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_type_check_class_cast
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_encoding_container_profile_add_profile
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_bin_iterate_sources
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_hscale_new_with_range
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_sink_get_max_buffers
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_style_set_background
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_cond_wait
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_src_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gtk_window_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved deflateParams
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_object_get_type
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved g_source_remove
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_uri_get_protocol
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_app_sink_set_drop
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+ipo: warning #11021: unresolved gst_caps_set_simple
+        Referenced in /opt/api/ext/opencv/2411/lib/libopencv_highgui_gcc48_cuda70.so
+
+==================================================================================
+[CBI] -> Target Name  : Student_OMP_Image_intel_x86_64
+[CBI] -> Location     : /tmp/ramdrive/arc16/Targets/Student_OMP_Image/bin/Student_OMP_Image_intel_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : arc16
+[CBI] ->
+[CBI] -> Compilateur  : INTEL (icpc)
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 4 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/Student_OMP_Image_intel_x86_64.run
+
+[CBI] -> Student_OMP_Image_intel_x86_64 : End ALL!
+

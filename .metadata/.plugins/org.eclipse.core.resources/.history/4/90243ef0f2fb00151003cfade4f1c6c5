@@ -1,0 +1,82 @@
+#pragma once
+
+#include <math.h>
+#include "MathTools.h"
+
+#include "Calibreur_CPU.h"
+#include "ColorTools_CPU.h"
+using namespace cpu;
+
+/* ========== DECLARATION ========== */
+
+class MandelbrotMath
+{
+	/* ---------- PUBLIC ---------- */
+
+public:
+	/* ---------- CONSTRUCTEUR ---------- */
+
+	MandelbrotMath(uint n) :
+			calibreur(Interval<float>(-2.1, -1.3), Interval<float>(0.8, 1.3))
+	{
+		this->n = n;
+	}
+
+	virtual ~MandelbrotMath()
+	{
+		// Nope
+	}
+
+	/* ---------- METHODES ---------- */
+
+	void colorXY(uchar4 *ptrColor, float x, float y, float t)
+	{
+		float k = getK(x, y);
+
+		float hue = (1.0 / this->n) * k;
+
+		ColorTools::HSB_TO_RVB(hue, ptrColor);
+
+		ptrColor->w = 255;
+	}
+
+private:
+
+	bool isDivergent(float z)
+	{
+		return z > 2.0 ? true : false;
+	}
+
+	int getK(float x, float y)
+	{
+		float zr = 0.0;
+		float zi = 0.0;
+		float old_zr;
+
+		for(int k = 0; k < this->n; k++)
+		{
+			if(isDivergent(norm(zr, zi)))
+				return k;
+
+			//r = a^2 - b^2
+			//i = 2*ab
+			old_z = zr;
+			zr = pow(zr, 2) - pow(zi, 2) + x;
+			zi = 2 * old_zr * zi + y;
+		}
+		return k;
+	}
+
+	float norm(float a, float b)
+	{
+		return sqrt(pow(a, 2) + pow(b, 2));
+	}
+
+	/* ---------- ATTRIBUTS ---------- */
+
+	// Input
+	uint n;
+
+	// Tools
+	Calibreur<float> calibreur;
+};

@@ -1,0 +1,39 @@
+#pragma once
+
+#include "MandelbrotMath.h"
+
+#include "cudaType_CPU.h"
+#include "Variateur_CPU.h"
+#include "Animable_I_CPU.h"
+
+using namespace cpu;
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+class Fractal
+{
+
+public:
+	// Constructore destructor
+	Fractal(uint n);
+	virtual ~Fractal(void);
+
+	// Util
+	bool isDivergent(float a, float b);
+
+
+
+private:
+	// Inputs
+	uint n;
+
+};
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

@@ -1,0 +1,233 @@
+16:18:39 **** Incremental Build of configuration CudaVisual_parallel for project Cuda_MOO ****
+makeCudaVisual.bat jall 
+init make
+init API-EXT
+init API-CBI
+
+[CUDA VISUAL] : jall  
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2015 NVIDIA Corporation
+Built on Tue_Aug_11_14:49:10_CDT_2015
+Cuda compilation tools, release 7.5, V7.5.17
+
+Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30501 for x64
+usage: cl [ option... ] filename... [ /link linkoption... ]
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+
+==================================================================================
+[CBI] -> Target Name  : Cuda_MOO_visual_cuda_75_64
+[CBI] ->
+[CBI] -> Build        : Q:/cedric.bilat/Targets/Cuda_MOO/bin/Cuda_MOO_visual_cuda_75_64.exe
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : EXE
+[CBI] -> Arch	      : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../BilatTools_CPP/src/core
+[CBI] ->              : ../BilatTools_Cuda/src/core
+[CBI] ->              : ../BilatUtil_CPP/src/core
+[CBI] ->              : c:/Soft_API/ext/Boost/158/visual/lib_static/x64
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/LIB_STATIC/visual
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /openmp
+[CBI] ->              : /MD
+[CBI] ->              : /Ox
+[CBI] ->              : /arch:AVX
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /NODEFAULTLIB:LIBCMT
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_20
+[CBI] ->              : -m64
+[CBI] ->              : -use_fast_math
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_20
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/namespace_cpu/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/both/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/curand/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/reduction/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/synchronisation/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/host/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/mixte/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/nvidia/
+[CBI] ->              : ../BilatUtil_CPP/src/core/utils/header/
+[CBI] ->              : src/cpp/core/01_dotProd/device/
+[CBI] ->              : src/cpp/core/01_dotProd/host/
+[CBI] ->              : src/cpp/core/03_montecarlo/device/
+[CBI] ->              : src/cpp/core/03_montecarlo/host/monoGPU/
+[CBI] ->              : src/cpp/core/03_montecarlo/host/multiGPU/
+[CBI] ->              : src/cpp/core/03_montecarlo/host/multiGPU/boost/
+[CBI] ->              : src/cpp/core/03_montecarlo/host/multiGPU/omp/
+[CBI] ->              : src/cpp/core/03_montecarlo/host/multiGPU/stream/
+[CBI] ->              : src/cpp/test/junit/header/
+
+[CBI] -> LIB_PATH (auto detect):
+[CBI] ->              : c:/Soft_API/ext/Boost/158/visual/lib_static/x64/
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/LIB_STATIC/visual/
+
+[CBI] -> API_INC :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/include
+[CBI] ->              : c:/Soft_API/ext/Boost/158/include
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/INC
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/INC/extension
+
+[CBI] -> API_LIB :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/lib/x64
+
+[CBI] -> API_BIN :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/bin
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/lib/x64
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : OpenCL
+[CBI] ->              : cublas
+[CBI] ->              : cuda
+[CBI] ->              : cudadevrt
+[CBI] ->              : cudart
+[CBI] ->              : cudart_static
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : curand
+[CBI] ->              : cusparse
+[CBI] ->              : nppc
+[CBI] ->              : nppi
+[CBI] ->              : npps
+[CBI] ->              : nvblas
+[CBI] ->              : nvcuvid
+
+
+[CBI] -> Compilation parallel (6 threads)
+
+DotProd.cu
+Montecarlo.cu
+
+[CBI] -> Linking to   : Q:/cedric.bilat/Targets/Cuda_MOO/bin/Cuda_MOO_visual_cuda_75_64.exe
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lCpp_Test_visual_64
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcuda
+[CBI] ->              : -lcudadevrt
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcudart_static
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusparse
+[CBI] ->              : -llibboost_atomic-vc120-mt-1_55
+[CBI] ->              : -llibboost_chrono-vc120-mt-1_55
+[CBI] ->              : -llibboost_context-vc120-mt-1_55
+[CBI] ->              : -llibboost_coroutine-vc120-mt-1_55
+[CBI] ->              : -llibboost_date_time-vc120-mt-1_55
+[CBI] ->              : -llibboost_exception-vc120-mt-1_55
+[CBI] ->              : -llibboost_filesystem-vc120-mt-1_55
+[CBI] ->              : -llibboost_graph-vc120-mt-1_55
+[CBI] ->              : -llibboost_iostreams-vc120-mt-1_55
+[CBI] ->              : -llibboost_locale-vc120-mt-1_55
+[CBI] ->              : -llibboost_log-vc120-mt-1_55
+[CBI] ->              : -llibboost_log_setup-vc120-mt-1_55
+[CBI] ->              : -llibboost_math_c99-vc120-mt-1_55
+[CBI] ->              : -llibboost_math_c99f-vc120-mt-1_55
+[CBI] ->              : -llibboost_math_c99l-vc120-mt-1_55
+[CBI] ->              : -llibboost_math_tr1-vc120-mt-1_55
+[CBI] ->              : -llibboost_math_tr1f-vc120-mt-1_55
+[CBI] ->              : -llibboost_math_tr1l-vc120-mt-1_55
+[CBI] ->              : -llibboost_prg_exec_monitor-vc120-mt-1_55
+[CBI] ->              : -llibboost_program_options-vc120-mt-1_55
+[CBI] ->              : -llibboost_python-vc120-mt-1_55
+[CBI] ->              : -llibboost_random-vc120-mt-1_55
+[CBI] ->              : -llibboost_regex-vc120-mt-1_55
+[CBI] ->              : -llibboost_signals-vc120-mt-1_55
+[CBI] ->              : -llibboost_system-vc120-mt-1_55
+[CBI] ->              : -llibboost_test_exec_monitor-vc120-mt-1_55
+[CBI] ->              : -llibboost_thread-vc120-mt-1_55
+[CBI] ->              : -llibboost_timer-vc120-mt-1_55
+[CBI] ->              : -llibboost_unit_test_framework-vc120-mt-1_55
+[CBI] ->              : -llibboost_wave-vc120-mt-1_55
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppi
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvblas
+[CBI] ->              : -lnvcuvid
+
+main.obj
+mainCore.obj
+MontecarloMultiGPU_A.obj
+MontecarloBoost.obj
+MontecarloOMP.obj
+MontecarloStream.obj
+mainTest.obj
+TestMontecarloPiJunit.obj
+TestHistoJunit.obj
+StringTools.obj
+Progress.obj
+Fps.obj
+TabTools.obj
+Chrono.obj
+AleaTools.obj
+LimitsTools.obj
+MathTools.obj
+IndiceTools_CPU.obj
+ColorTools_CPU.obj
+cudaTools.obj
+Grid.obj
+Device.obj
+Options.obj
+vectorTools.obj
+tab1DTools.obj
+histo.obj
+rawMajorTools.obj
+tab2DTools.obj
+dotProdDevice.obj
+DotProd.obj
+montecarloDevice.obj
+Montecarlo.obj
+
+==================================================================================
+[CBI] -> Target Name  : Cuda_MOO_visual_cuda_75_64
+[CBI] -> Location     : Q:/cedric.bilat/Targets/Cuda_MOO/bin/Cuda_MOO_visual_cuda_75_64.exe
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 	      : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Compilateur  : VISUAL (cl) && NVIDIA (nvcc)
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 9 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/Cuda_MOO_visual_cuda_75_64.exe
+
+[CBI] -> Cuda_MOO_visual_cuda_75_64 : End ALL!
+
+
+16:18:52 Build Finished (took 13s.4ms)
+

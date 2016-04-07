@@ -1,0 +1,78 @@
+14:02:54 **** Build of configuration IntelWin for project BilatTools_gphoto2_Linux ****
+makeIntelWin.bat all 
+init make
+init API-EXT
+init API-CBI
+
+[INTEL] : all  
+
+Intel(R) Parallel Studio XE 2015
+Copyright (C) 1985-2015 Intel Corporation. All rights reserved.
+Intel(R) Parallel Studio XE 2015 Update 4 Composer Edition (package 221)
+ 
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Gphoto2_intel_64
+[CBI] ->
+[CBI] -> Build     	  : Q:/cedric.bilat/Targets/BilatTools_Gphoto2/bin/BilatTools_Gphoto2_intel_64.exe
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /EHsc
+[CBI] ->              : /MD
+[CBI] ->              : /O3
+[CBI] ->              : /Qopenmp
+[CBI] ->              : /Qpar-threshold100
+[CBI] ->              : /Qparallel
+[CBI] ->              : /QxHost
+[CBI] ->              : /fast
+[CBI] ->              : /nologo
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /link
+[CBI] ->              : /nologo
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/cpp/core/reflex/
+[CBI] ->              : src/cpp/core/reflex/nikon/
+[CBI] ->              : src/cpp/core/reflex/nikon/d50/
+[CBI] ->              : src/cpp/core/reflex/nikon/d7100/
+[CBI] ->              : src/cpp/core/reflex/tools/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+
+[CBI] -> API_LIB :
+
+[CBI] -> API_BIN :
+
+[CBI] -> API_LIBRARIES :
+
+[CBI] -> Create folder : Q:/cedric.bilat/Targets/BilatTools_Gphoto2/bin
+[CBI] -> Create folder : Q:/cedric.bilat/Targets/BilatTools_Gphoto2/obj
+
+main.cpp
+src/cpp/core/main.cpp(4): catastrophic error: cannot open source file "unistd.h"
+  #include <unistd.h> // sleep
+                              ^
+
+compilation aborted for src/cpp/core/main.cpp (code 4)
+../BUILDER/makefile/private/cpp/rules.mk:136: recipe for target `Q:/cedric.bilat/Targets/BilatTools_Gphoto2/obj/main.obj' failed
+make: *** [Q:/cedric.bilat/Targets/BilatTools_Gphoto2/obj/main.obj] Error 4
+
+14:02:56 Build Finished (took 1s.832ms)
+

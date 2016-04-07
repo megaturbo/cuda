@@ -1,0 +1,203 @@
+09:34:03 **** Build of configuration GCC_parallel for project OMP_MOO ****
+makeGCC.sh jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+[Runtime] : Cuda  : /usr/local/cuda/lib64
+[Runtime] : Cula  : /usr/local/cula/lib64
+[Runtime] : MKL   : /opt/intel/mkl/lib/intel64
+
+[Runtime] : GL/GLEW/GLU
+[Runtime] : FreeGlut
+[Runtime] : Java (JNI)
+[Runtime] : X11
+
+[Runtime] : BOOST   : /opt/api/ext/boost/[user-version]/lib/gcc
+[Runtime] : OpenCV  : /opt/api/ext/opencv/[user-version]/lib
+[Runtime] : CppTest : /opt/api/ext/cpptest/[user-version]/LIB-STATIC/gcc
+
+[Runtime] : bilat_tools
+[Runtime] : bilat_fenetrage
+[Runtime] : bilat_opengl
+[Runtime] : bilat_image
+[Runtime] : bilat_graphe2d
+[Runtime] : bilat_multicourbe_cuda
+[Runtime] : bilat_surface
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 4.8.4-2ubuntu1~14.04) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+[Make] : GCC : jall
+
+==================================================================================
+[CBI] -> Target Name  : OMP_MOO_gcc_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/OMP_MOO/bin/OMP_MOO_gcc_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../BilatTools_CPP/src/core
+[CBI] ->              : ../BilatTools_OMP/src/core
+[CBI] ->              : ../BilatUtil_CPP/src/core
+[CBI] ->              : /opt/api/ext/cpptest/112/LIB_STATIC/gcc
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fomit-frame-pointer
+[CBI] ->              : -fopenmp
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -march=native
+[CBI] ->              : -std=c++11
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/namespace_cpu/
+[CBI] ->              : ../BilatTools_OMP/src/core/OMP_Tools/header/
+[CBI] ->              : ../BilatUtil_CPP/src/core/utils/header/
+[CBI] ->              : src/cpp/core/omp/02_pi/
+[CBI] ->              : src/cpp/core/omp/03_dotProd/
+[CBI] ->              : src/cpp/core/omp/04_histo/
+[CBI] ->              : src/cpp/test/unit/01_Test_Hello/
+[CBI] ->              : src/cpp/test/unit/02_Test_Pi/
+[CBI] ->              : src/cpp/test/unit/03_Test_DotProd/
+[CBI] ->              : src/cpp/test/unit/04_Test_Histo/
+[CBI] ->              : src/cpp/test/unit/05_Test_Montecarlo/
+[CBI] ->              : src/cpp/test/unit/07_Test_Racine2/
+[CBI] ->              : src/cpp/test/unit/08_Test_VectorADD/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/ext/cpptest/112/INC
+[CBI] ->              : /opt/api/ext/cpptest/112/INC/extension
+
+[CBI] -> API_LIB :
+
+[CBI] -> API_BIN :
+
+[CBI] -> API_LIBRARIES :
+
+
+[CBI] -> Compilation parallel (12 threads)
+
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/main.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/05_Test_Montecarlo/TestMontecarloPi.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/08_Test_VectorADD/TestVectorAdd.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/02_Test_Pi/TestPi.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/01_Test_Hello/TestHello.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/04_Test_Histo/TestHisto.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/07_Test_Racine2/TestRacine2.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_DotProd/TestDotProd.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/01_hello/01_helloOMP.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/01_hello/useHello.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/04_histo/01_histogramme_sequentiel.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/04_histo/02_histogramme_entrelacer_promotionTab.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/04_histo/03_histogramme_for_atomic.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/04_histo/04_histogramme_for_PromotionTab.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/04_histo/useHisto.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/exConsolidation/01_addvector/00_addVectorTools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/exConsolidation/01_addvector/01_addVector_sequentiel.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/exConsolidation/01_addvector/02_addVector_entrelacer.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/exConsolidation/01_addvector/03_addVector_for.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/exConsolidation/01_addvector/useAddVector.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/exConsolidation/02_racine2/01_racine2_nonAlterner.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/exConsolidation/02_racine2/02_racine2_nonAlterner.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/exConsolidation/02_racine2/03_racine2_alterner.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/exConsolidation/02_racine2/04_racine2_alterner.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/exConsolidation/02_racine2/useRacine2.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_dotProd/00_dotProd_tools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_dotProd/01_dotProd_sequential.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_dotProd/02_dotProd_entrelacer_promotionTab.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_dotProd/03_dotProd_entrelacer_critique.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_dotProd/04_dotProd_entrelacer_atomic.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_dotProd/05_dotProd_for_critical.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_dotProd/06_dotProd_for_atomique.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_dotProd/07_dotProd_for_promotionTab.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_dotProd/08_dotProd_for_reduction.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_dotProd/useDotProd.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/05_montecarlo/00_montecarlo_tools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/05_montecarlo/01_montecarlo_sequentiel.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/05_montecarlo/02_montecarlo_omp_entrelacer_promotionTab.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/05_montecarlo/03_montecarlo_omp_forReduction.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/05_montecarlo/useMontecarlo.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_pi/00_pi_tools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_pi/01_pi_sequentiel.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_pi/02_pi_entrelacer_promotionTab.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_pi/03_pi_entrelacer_critique.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_pi/04_pi_entrelacer_atomic.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_pi/05_pi_for_critical.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_pi/06_pi_for_atomic.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_pi/07_pi_for_promotionTab.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_pi/08_pi_for_reduction.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_pi/usePI.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/AleaTools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Chrono.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Fps.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/LimitsTools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/MathTools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Progress.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/StringTools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/TabTools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/ColorTools_CPU.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/IndiceTools_CPU.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_OMP/src/core/OMP_Tools/cpp/OmpTools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatUtil_CPP/src/core/utils/cpp/histo.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatUtil_CPP/src/core/utils/cpp/rawMajorTools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatUtil_CPP/src/core/utils/cpp/tab1DTools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatUtil_CPP/src/core/utils/cpp/tab2DTools.cpp
+[OMP_MOO_gcc_x86_64] -> g++ compiling .cpp : ../BilatUtil_CPP/src/core/utils/cpp/vectorTools.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/OMP_MOO/bin/OMP_MOO_gcc_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->              : -lCpp_Test_gcc_x86_64
+[CBI] ->              : -lgomp
+
+==================================================================================
+[CBI] -> Target Name  : OMP_MOO_gcc_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/OMP_MOO/bin/OMP_MOO_gcc_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++ (g++)
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 2 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/OMP_MOO_gcc_x86_64.run
+
+[CBI] -> OMP_MOO_gcc_x86_64 : End ALL!
+
+
+09:34:05 Build Finished (took 2s.65ms)
+

@@ -1,0 +1,29 @@
+12:57:50 **** Clean-only build of configuration IntelWin_parallel for project Tuto_Image_JNI ****
+makeIntelWin.bat clean 
+init make
+init API-EXT
+init API-CBI
+
+[INTEL] : clean  
+
+Intel(R) Parallel Studio XE 2015
+Copyright (C) 1985-2015 Intel Corporation. All rights reserved.
+Intel(R) Parallel Studio XE 2015 Update 4 Composer Edition (package 221)
+ 
+
+
+==================================================================================
+[CBI] -> Target            : Tuto_Image_JNI_intel_64
+[CBI] -> Task			   : DELETE
+[CBI] ->
+[CBI] -> Delete .obj       : Q:/cedric.bilat/Targets/Tuto_Image_JNI/obj
+[CBI] -> Delete .bin       : Q:/cedric.bilat/Targets/Tuto_Image_JNI/bin
+[CBI] -> Delete doc        : Q:/cedric.bilat/Targets/Tuto_Image_JNI/doc
+[CBI] ->
+[CBI] -> Delete deploy     : ../RELEASE/bin/Tuto_Image_JNI_intel_64.dll
+[CBI] -> Delete deploy doc : ../RELEASE/doc/Tuto_Image_JNI_intel_64.doc.tar.gz
+==================================================================================
+
+
+12:57:52 Build Finished (took 2s.141ms)
+
