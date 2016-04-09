@@ -14,6 +14,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/arc16/CUDA/toStudent/code/WCuda/Student_Cuda_Image_Demo"/>
 			<item value="G:\CBI\HEARC\RAD\Running\CudaTuto\02_Scientifique\01_Code\WCudaMSE\Tuto_gphoto2_Linux"/>
 			<item value="G:\CBI\HEARC\RAD\Running\CudaTuto\02_Scientifique\01_Code\WCudaMSE\BilatTools_V4L_linux"/>
 			<item value="G:\CBI\HEARC\RAD\Running\CudaTuto\02_Scientifique\01_Code\WCudaMSE\BUILDER_Symlink"/>

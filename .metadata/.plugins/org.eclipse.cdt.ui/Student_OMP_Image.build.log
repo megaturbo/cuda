@@ -1,4 +1,4 @@
-11:33:40 **** Incremental Build of configuration IntelLinux_parallel for project Student_OMP_Image ****
+11:08:07 **** Build of configuration IntelLinux_parallel for project Student_OMP_Image ****
 makeIntelLinux.sh jall 
 
 --------------------------------------------------------
@@ -191,10 +191,50 @@ Copyright (C) 1985-2015 Intel Corporation.  All rights reserved.
 [CBI] ->              : opencv_video_gcc48_cuda70
 [CBI] ->              : opencv_videostab_gcc48_cuda70
 
+[CBI] -> Create folder : /tmp/ramdrive/arc16/Targets/Student_OMP_Image/bin
+[CBI] -> Create folder : /tmp/ramdrive/arc16/Targets/Student_OMP_Image/obj
 
 [CBI] -> Compilation parallel (12 threads)
 
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : src/main.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : src/core/mainAnimable.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : src/core/mainImage.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : src/core/02_Mandelbrot_Julia/a_animable/Julia.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : src/core/02_Mandelbrot_Julia/a_animable/Mandelbrot.cpp
 [Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : src/core/02_Mandelbrot_Julia/b_provider/JuliaProvider.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : src/core/02_Mandelbrot_Julia/b_provider/MandelbrotProvider.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : src/core/01_Rippling/a_animable/Rippling.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : src/core/01_Rippling/b_provider/RipplingProvider.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/AleaTools.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Chrono.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Fps.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/LimitsTools.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/MathTools.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Progress.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/StringTools.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/TabTools.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/ColorTools_CPU.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/IndiceTools_CPU.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OMP/src/core/OMP_Tools/cpp/OmpTools.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_Image/src/core/tools/imp/Settings_CPU.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/capture/video/CVCaptureVideo.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/capture/webcam/CVCaptureWebcam.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/appearance/AppearanceShape.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/drawer/LineDrawer.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/drawer/ShapeDrawer.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/drawer/ShapeDrawerTransparant.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Circle.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Line.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Polygon.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Rectangle.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Shape.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/ShapeGroup.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Triangle.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/view/FactoryImageViewer.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/view/viewer/CVViewerUcharBGR.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/show/view/viewerMat/CVViewerMatBGR.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/tools/OpencvTools.cpp
+[Student_OMP_Image_intel_x86_64] -> icpc compiling .cpp : ../BilatTools_OpenCV/src/core/tools/cpu/OpencvTools_CPU.cpp
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc16/Targets/Student_OMP_Image/bin/Student_OMP_Image_intel_x86_64.run
 
@@ -1527,7 +1567,7 @@ ipo: warning #11021: unresolved gst_caps_set_simple
 [CBI] ->
 [CBI] -> Compilateur  : INTEL (icpc)
 [CBI] -> Task	      : End Compiling-Linking !
-[CBI] -> Time		  : 4 (s)
+[CBI] -> Time		  : 6 (s)
 ==================================================================================
 
 
@@ -1536,5 +1576,5 @@ ipo: warning #11021: unresolved gst_caps_set_simple
 [CBI] -> Student_OMP_Image_intel_x86_64 : End ALL!
 
 
-11:33:44 Build Finished (took 3s.576ms)
+11:08:13 Build Finished (took 6s.380ms)
 
