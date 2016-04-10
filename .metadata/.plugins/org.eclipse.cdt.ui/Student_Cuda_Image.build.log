@@ -1,4 +1,4 @@
-17:39:44 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
+21:12:07 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
 makeCudaGCC.sh jall 
 
 --------------------------------------------------------
@@ -139,6 +139,9 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/01_animable/device/math/
 [CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/01_animable/host/
 [CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/02_provider/
+[CBI] ->              : src/cpp/core/03_RayTracing/moo/device/math/
+[CBI] ->              : src/cpp/core/03_RayTracing/moo/host/
+[CBI] ->              : src/cpp/core/03_RayTracing/provider/
 
 
 [CBI] -> LIB_PATH (auto detect):
@@ -268,7 +271,7 @@ Cuda compilation tools, release 7.0, V7.0.27
 
 [CBI] -> Compilation parallel (12 threads)
 
-[Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
+[Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/mainImage.cpp
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc16/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_gcc_cuda_70_x86_64.run
 
@@ -376,5 +379,5 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] -> Student_Cuda_Image_gcc_cuda_70_x86_64 : End ALL!
 
 
-17:39:45 Build Finished (took 1s.466ms)
+21:12:09 Build Finished (took 1s.915ms)
 

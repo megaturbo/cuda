@@ -1,0 +1,60 @@
+#pragma once
+
+#include <math.h>
+#include "MathTools.h"
+
+#include "Calibreur_GPU.h"
+#include "ColorTools_GPU.h"
+using namespace gpu;
+
+/* ========== DECLARATION ========== */
+
+class RayTracingMath
+{
+	/* ---------- PUBLIC ---------- */
+
+public:
+	/* ---------- CONSTRUCTEUR ---------- */
+
+	__device__ RayTracingMath()
+	{
+		// Nope
+	}
+
+	__device__
+	virtual ~MandelbrotMath()
+	{
+		// Nope
+	}
+
+	/* ---------- METHODES ---------- */
+
+	__device__
+	void colorXY(uchar4 *ptrColor, float x, float y, float t)
+	{
+		float k = getK(x, y);
+		if(k > this->n){
+			ptrColor->x = 0;
+			ptrColor->y = 0;
+			ptrColor->z = 0;
+		}else{
+			float hue = k;
+//			float hue = (1.0 / this->n) * k; 	// equivalent à calibreur.calibrer(hue)
+			calibreur.calibrer(hue);
+			ColorTools::HSB_TO_RVB(hue, ptrColor);
+		}
+		ptrColor->w = 255;
+	}
+
+private:
+
+	__device__
+	int f(float x, float y)
+	{
+	}
+
+	/* ---------- ATTRIBUTS ---------- */
+
+	// Tools
+	Calibreur<float> calibreur;
+};

@@ -1,0 +1,46 @@
+#pragma once
+
+#include <math.h>
+#include "MathTools.h"
+
+#include "Calibreur_GPU.h"
+#include "ColorTools_GPU.h"
+using namespace gpu;
+
+/* ========== DECLARATION ========== */
+
+class RayTracingMath
+{
+	/* ---------- PUBLIC ---------- */
+
+public:
+	/* ---------- CONSTRUCTEUR ---------- */
+
+	__device__ RayTracingMath()
+	{
+		// Nope
+	}
+
+	__device__
+	virtual ~MandelbrotMath()
+	{
+		// Nope
+	}
+
+	/* ---------- METHODES ---------- */
+
+	__device__
+	void f(int i, int j, float t, uchar* ptrlevelGris)
+	{
+		f(ptrColor, x, y);
+	}
+
+private:
+
+	__device__
+	int f(float x, float y)
+	{
+	}
+
+	/* ---------- ATTRIBUTS ---------- */
+};
