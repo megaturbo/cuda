@@ -1,12 +1,9 @@
-#include "../02_provider/JuliaProvider.h"
-
-#include "Julia.h"
-
+#include "JuliaProvider.h"
 #include "MathTools.h"
+#include "Grid.h"
+#include "../01_animable/host/Julia.h"
 
-#include "ImageAnimable_CPU.h"
-#include "DomaineMath_CPU.h"
-using namespace cpu;
+using namespace gpu;
 
 /* ========== DECLARATION =========== */
 
@@ -45,7 +42,11 @@ Animable_I<uchar4>* JuliaProvider::createAnimable(void)
 	int dw = 16 * 80;
 	int dh = 16 * 60;
 
-	return new Julia(dw, dh, dt, n, c1, c2, domaineMath);
+	dim3 dg = dim3(32, 2, 1);
+	dim3 db = dim3(32, 32, 1);
+	Grid grid(dg, db);
+
+	return new Julia(grid, dw, dh, dt, n, c1, c2, domaineMath);
 }
 
 /**

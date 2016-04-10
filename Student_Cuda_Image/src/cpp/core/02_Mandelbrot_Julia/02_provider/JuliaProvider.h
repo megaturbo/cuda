@@ -1,9 +1,9 @@
 #pragma once
+#include "cudaTools.h"
 
-#include "Animable_I_CPU.h"
-#include "Provider_I_CPU.h"
+#include "Provider_I_GPU.h"
 
-using namespace cpu;
+using namespace gpu;
 
 /* ========== DECLARATION ========== */
 
@@ -19,7 +19,7 @@ public:
 
 	/* ---------- OVERRIDE ---------- */
 
-	Animable_I<uchar4>* createAnimable(void);
+	virtual Animable_I<uchar4>* createAnimable(void);
 
-	Image_I* createImageGL(void);
+	virtual Image_I* createImageGL(void);
 };

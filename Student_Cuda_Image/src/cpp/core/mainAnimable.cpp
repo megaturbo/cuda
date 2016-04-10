@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 #include "RipplingProvider.h"
+#include "MandelbrotProvider.h"
+#include "JuliaProvider.h"
 
 #include "Animateur_GPU.h"
 #include "Settings_GPU.h"
@@ -29,6 +31,8 @@ int mainAnimable(Settings& settings);
  \*-------------------------------------*/
 
 static void rippling();
+static void mandelbrot();
+static void julia();
 
 // Tools
 template<typename T>

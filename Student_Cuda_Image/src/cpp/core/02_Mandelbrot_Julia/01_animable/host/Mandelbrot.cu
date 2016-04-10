@@ -1,37 +1,29 @@
-#include "../../01_animable/host/Mandelbrot.h"
-
-#include "MandelbrotMath.h"
-
 #include <iostream>
-#include <omp.h>
-#include "OmpTools.h"
+#include <assert.h>
 
-#include "IndiceTools_CPU.h"
-using cpu::IndiceTools;
+#include "Device.h"
+#include "Mandelbrot.h"
+#include "DomaineMath_GPU.h"
 
 using std::cout;
 using std::endl;
 
 /* ========== DECLARATION ========== */
 
-__global__ void processMandelbrot(uchar4* ptrDevPixels, int w, int h, int n, const DomaineMath& domaineMath);
+extern __global__ void mandelbrot(uchar4* ptrDevPixels, uint w, uint h, float t, uint n, const DomaineMath& domaineMath);
 
 /* ---------- PUBLIC ---------- */
 
-Mandelbrot::Mandelbrot(uint width, uint height, float deltaTime, uint n,
-		const DomaineMath &domaineMath) :
-		Animable_I<uchar4>(width, height, "Mandelbrot Roulin", domaineMath), variateurAnimation(
-				Interval<float>(0, 2 * PI), deltaTime)
+Mandelbrot::Mandelbrot(const Grid &grid, uint width, uint height, float t,
+		uint n, const DomaineMath &domaineMath) :
+		Animable_I<uchar4>(grid, width, height, "Mandelbrot Roulin",
+				domaineMath)
 {
 	// Inputs
 	this->n = n;
 
 	// Tools
-	this->t = 0;
-	this->parallelPatern = ParallelPatern::OMP_MIXTE;
-
-	// OMP
-	cout << "\n[Mandelbrot] : OMP : nbThread = " << this->nbThread << endl;
+	this->t = t;
 }
 
 Mandelbrot::~Mandelbrot(void)
@@ -39,11 +31,29 @@ Mandelbrot::~Mandelbrot(void)
 	// Rien
 }
 
+/* ~~~~~~~~~~  METHODS  ~~~~~~~~~~ */
+/**
+ * Override
+ * Call periodicly by the API
+ *
+ * Note : domaineMath pas use car pas zoomable
+ */
+void Mandelbrot::process(uchar4* ptrDevPixels, uint w, uint h,
+		const DomaineMath& domaineMath)
+{
+	Device::lastCudaError("mandelbrot rgba uchar4 (before)"); // facultatif, for debug only, remove for release
+
+	// start kernel
+	mandelbrot<<<dg, db>>>(ptrDevPixels, w, h, t, n, domaineMath);
+
+	Device::lastCudaError("mandelbrot rgba uchar4 (after)"); // facultatif, for debug only, remove for release
+}
+
 /* ~~~~~~~~~~ OVERRIDES ~~~~~~~~~~ */
 
 void Mandelbrot::animationStep()
 {
-	this->t = variateurAnimation.varierAndGet();
+	this->t += t;
 }
 
 /**
