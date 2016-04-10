@@ -1,4 +1,4 @@
-21:12:07 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
+21:58:40 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
 makeCudaGCC.sh jall 
 
 --------------------------------------------------------
@@ -271,7 +271,7 @@ Cuda compilation tools, release 7.0, V7.0.27
 
 [CBI] -> Compilation parallel (12 threads)
 
-[Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/mainImage.cpp
+[Student_Cuda_Image_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/moo/host/RayTracing.cu
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc16/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_gcc_cuda_70_x86_64.run
 
@@ -357,27 +357,11 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->              : -lopencv_videostab_gcc48_cuda70
 [CBI] ->              : -lpthread
 
+/tmp/ramdrive/arc16/Targets/Student_Cuda_Image/obj/RayTracing.o: In function `RayTracing::process(uchar4*, unsigned int, unsigned int, gpu::DomaineMath const&)':
+tmpxft_00005ab8_00000000-4_RayTracing.cudafe1.cpp:(.text+0x72): undefined reference to `rayTracing(uchar4*, unsigned int, unsigned int, float, unsigned int)'
+collect2: error: ld returned 1 exit status
+make[1]: *** [/tmp/ramdrive/arc16/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_gcc_cuda_70_x86_64.run] Error 1
+make: *** [jall] Error 2
 
-==================================================================================
-[CBI] -> Target Name  : Student_Cuda_Image_gcc_cuda_70_x86_64
-[CBI] -> Location     : /tmp/ramdrive/arc16/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_gcc_cuda_70_x86_64.run
-[CBI] -> Deploy 	  : ../RELEASE/bin
-[CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 	      : Linux
-[CBI] -> User	 	  : arc16
-[CBI] ->
-[CBI] -> Compilateur  : g++) && nvcc
-[CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 1 (s)
-==================================================================================
-
-
-[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_Image_gcc_cuda_70_x86_64.run
-
-[CBI] -> Student_Cuda_Image_gcc_cuda_70_x86_64 : End ALL!
-
-
-21:12:09 Build Finished (took 1s.915ms)
+21:58:44 Build Finished (took 4s.270ms)
 

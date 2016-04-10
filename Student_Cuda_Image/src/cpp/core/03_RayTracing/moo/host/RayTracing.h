@@ -2,7 +2,7 @@
 
 #include "cudaTools.h"
 #include "MathTools.h"
-
+#include "Sphere.h"
 #include "Animable_I_GPU.h"
 using namespace gpu;
 
@@ -36,6 +36,8 @@ public:
 
 	virtual void animationStep();
 
+	float randomFloat(float min, float max);
+
 	/* ---------- PRIVATE ---------- */
 
 private:
@@ -44,5 +46,8 @@ private:
 
 	// Inputs
 	uint nbSphere;
+	Sphere* spheres;
+
 	float t;
+	float dt;
 };

@@ -22,7 +22,7 @@ Animable_I<uchar4>* RayTracingProvider::createAnimable(void)
 	dim3 db = dim3(16, 16, 1);
 	Grid grid(dg, db);
 
-	uint nbSphere = 20;
+	uint nbSphere = 50;
 
 	return new RayTracing(grid, dw, dh, dt, nbSphere);
 }
