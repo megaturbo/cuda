@@ -1,4 +1,4 @@
-14:35:52 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
+13:55:58 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
 makeCudaGCC.sh jall 
 
 --------------------------------------------------------
@@ -136,6 +136,7 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->              : src/cpp/core/01_Rippling/01_animable/device/math/
 [CBI] ->              : src/cpp/core/01_Rippling/01_animable/host/
 [CBI] ->              : src/cpp/core/01_Rippling/02_provider/
+[CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/provider/
 
 
 [CBI] -> LIB_PATH (auto detect):
@@ -265,12 +266,22 @@ Cuda compilation tools, release 7.0, V7.0.27
 
 [CBI] -> Compilation parallel (12 threads)
 
-make[1]: Nothing to be done for `compilelink'.
+[Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Mandelbrot_Julia/provider/JuliaProvider.cpp
+[Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Mandelbrot_Julia/provider/MandelbrotProvider.cpp
+In file included from src/cpp/core/02_Mandelbrot_Julia/provider/JuliaProvider.cpp:1:0:
+src/cpp/core/02_Mandelbrot_Julia/provider/JuliaProvider.h:3:28: fatal error: Animable_I_CPU.h: No such file or directory
+ #include "Animable_I_CPU.h"
+                            ^
+compilation terminated.
+In file included from src/cpp/core/02_Mandelbrot_Julia/provider/MandelbrotProvider.cpp:1:0:
+src/cpp/core/02_Mandelbrot_Julia/provider/MandelbrotProvider.h:3:28: fatal error: Animable_I_CPU.h: No such file or directory
+ #include "Animable_I_CPU.h"
+                            ^
+compilation terminated.
+make[1]: *** [/tmp/ramdrive/arc16/Targets/Student_Cuda_Image/obj/JuliaProvider.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make[1]: *** [/tmp/ramdrive/arc16/Targets/Student_Cuda_Image/obj/MandelbrotProvider.o] Error 1
+make: *** [jall] Error 2
 
-[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_Image_gcc_cuda_70_x86_64.run
-
-[CBI] -> Student_Cuda_Image_gcc_cuda_70_x86_64 : End ALL!
-
-
-14:35:53 Build Finished (took 862ms)
+13:55:59 Build Finished (took 660ms)
 
