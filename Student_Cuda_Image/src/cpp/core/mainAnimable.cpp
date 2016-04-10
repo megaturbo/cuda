@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 
-#include "RipplingProvider.h"
+#include "01_Rippling/provider/RipplingProvider.h"
 #include "MandelbrotProvider.h"
 #include "JuliaProvider.h"
 

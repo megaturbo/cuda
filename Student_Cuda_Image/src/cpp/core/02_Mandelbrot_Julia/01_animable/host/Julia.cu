@@ -10,7 +10,7 @@ using std::endl;
 
 /* ========== DECLARATION ========== */
 
-extern __global__ void julia(uchar4* ptrDevPixels, uint w, uint h, float t, uint n, float c1, float c2, const DomaineMath& domaineMath);
+extern __global__ void julia(uchar4* ptrDevPixels, uint w, uint h, float t, uint n, float c1, float c2, DomaineMath domaineMath);
 
 /* ---------- PUBLIC ---------- */
 

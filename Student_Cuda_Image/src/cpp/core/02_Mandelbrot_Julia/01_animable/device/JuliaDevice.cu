@@ -25,7 +25,7 @@ using namespace gpu;
  \*-------------------------------------*/
 
 __global__ void julia(uchar4* ptrDevPixels, uint w, uint h, float t, uint n,
-		float c1, float c2, const DomaineMath &domaineMath);
+		float c1, float c2, DomaineMath domaineMath);
 
 /*--------------------------------------*\
  |*		Private			*|
@@ -40,7 +40,7 @@ __global__ void julia(uchar4* ptrDevPixels, uint w, uint h, float t, uint n,
  \*-------------------------------------*/
 
 __global__ void julia(uchar4* ptrDevPixels, uint w, uint h, float t, uint n,
-		float c1, float c2, const DomaineMath &domaineMath)
+		float c1, float c2, DomaineMath domaineMath)
 {
 	JuliaMath juliaMath = JuliaMath(n, c1, c2);
 

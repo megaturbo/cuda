@@ -5,9 +5,9 @@
 #include "ProviderGridMaillage1D.h"
 #include "ProviderGridMaillage2D.h"
 
-#include "RipplingProvider.h"
-
 #include "Animateur_GPU.h"
+
+#include "01_Rippling/provider/RipplingProvider.h"
 #include "Settings_GPU.h"
 using namespace gpu;
 

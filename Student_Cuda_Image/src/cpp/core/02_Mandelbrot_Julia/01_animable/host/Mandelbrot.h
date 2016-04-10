@@ -29,8 +29,8 @@ public:
 	 * Called periodically by the api
 	 */
 
-	virtual void process(uchar4* ptrTabPixels, uint width,
-			uint height, const DomaineMath &domaineMath);
+	virtual void process(uchar4* ptrTabPixels, uint width, uint height,
+			const DomaineMath &domaineMath);
 
 	/**
 	 * Called periodically by the api

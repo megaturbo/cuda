@@ -1,4 +1,4 @@
-16:35:42 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
+17:39:44 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
 makeCudaGCC.sh jall 
 
 --------------------------------------------------------
@@ -133,9 +133,9 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewerMat/
 [CBI] ->              : ../BilatTools_OpenCV/src/core/tools/
 [CBI] ->              : ../BilatTools_OpenCV/src/core/tools/cpu/
-[CBI] ->              : src/cpp/core/01_Rippling/01_animable/device/math/
-[CBI] ->              : src/cpp/core/01_Rippling/01_animable/host/
-[CBI] ->              : src/cpp/core/01_Rippling/02_provider/
+[CBI] ->              : src/cpp/core/01_Rippling/moo/device/math/
+[CBI] ->              : src/cpp/core/01_Rippling/moo/host/
+[CBI] ->              : src/cpp/core/01_Rippling/provider/
 [CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/01_animable/device/math/
 [CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/01_animable/host/
 [CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/02_provider/
@@ -269,8 +269,6 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] -> Compilation parallel (12 threads)
 
 [Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
-[Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/mainAnimable.cpp
-[Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/mainImage.cpp
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc16/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_gcc_cuda_70_x86_64.run
 
@@ -378,5 +376,5 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] -> Student_Cuda_Image_gcc_cuda_70_x86_64 : End ALL!
 
 
-16:35:44 Build Finished (took 1s.967ms)
+17:39:45 Build Finished (took 1s.466ms)
 

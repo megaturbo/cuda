@@ -1,9 +1,8 @@
 #include <iostream>
 #include <stdlib.h>
 
+#include "01_Rippling/provider/RipplingProvider.h"
 #include "Barivox.h"
-
-#include "RipplingProvider.h"
 
 #include "Settings_GPU.h"
 using namespace gpu;

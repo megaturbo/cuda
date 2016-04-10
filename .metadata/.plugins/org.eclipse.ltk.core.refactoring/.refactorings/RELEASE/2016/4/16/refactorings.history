@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;RELEASE/bin/Student_Cuda_Image_gcc_cuda_70_x86_64.run&apos; to &apos;demo.run&apos;" description="Rename resource &apos;Student_Cuda_Image_gcc_cuda_70_x86_64.run&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="bin/Student_Cuda_Image_gcc_cuda_70_x86_64.run" name="demo.run" stamp="1460304396508" updateReferences="true"/>&#x0A;<refactoring comment="Move &apos;demo.run&apos; to &apos;rendu&apos;" description="Move &apos;demo.run&apos; to &apos;rendu&apos;" destination="rendu" element1="bin/demo.run" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1460304412516" updateReferences="true"/>
+</session>

@@ -1,5 +1,5 @@
-16:35:42 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
-makeCudaGCC.sh jall 
+18:05:56 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Image_Demo ****
+makeCudaGCC.sh all 
 
 --------------------------------------------------------
 [Runtime] : gcc x86
@@ -44,7 +44,7 @@ Built on Mon_Feb_16_22:59:02_CST_2015
 Cuda compilation tools, release 7.0, V7.0.27
 
 
-[CUDA GCC] : jall
+[CUDA GCC] : all
 
 
 ==================================================================================
@@ -68,6 +68,7 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->              : ../BilatTools_OpenCV/src/core
 [CBI] ->              : ../BilatTools_Cuda/src/core
 [CBI] ->              : ../BilatTools_Cuda_Image/src/core
+[CBI] ->              : ../Student_Cuda_Image/src/cpp/core
 [CBI] ->              : /opt/api/cbi/opengl/201/Bilat_OpenGL_Tools/BIN/gcc
 [CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable/BIN/gcc
 [CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable_GL/BIN/gcc
@@ -133,12 +134,12 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewerMat/
 [CBI] ->              : ../BilatTools_OpenCV/src/core/tools/
 [CBI] ->              : ../BilatTools_OpenCV/src/core/tools/cpu/
-[CBI] ->              : src/cpp/core/01_Rippling/01_animable/device/math/
-[CBI] ->              : src/cpp/core/01_Rippling/01_animable/host/
-[CBI] ->              : src/cpp/core/01_Rippling/02_provider/
-[CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/01_animable/device/math/
-[CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/01_animable/host/
-[CBI] ->              : src/cpp/core/02_Mandelbrot_Julia/02_provider/
+[CBI] ->              : ../Student_Cuda_Image/src/cpp/core/01_Rippling/moo/device/math/
+[CBI] ->              : ../Student_Cuda_Image/src/cpp/core/01_Rippling/moo/host/
+[CBI] ->              : ../Student_Cuda_Image/src/cpp/core/01_Rippling/provider/
+[CBI] ->              : ../Student_Cuda_Image/src/cpp/core/02_Mandelbrot_Julia/01_animable/device/math/
+[CBI] ->              : ../Student_Cuda_Image/src/cpp/core/02_Mandelbrot_Julia/01_animable/host/
+[CBI] ->              : ../Student_Cuda_Image/src/cpp/core/02_Mandelbrot_Julia/02_provider/
 
 
 [CBI] -> LIB_PATH (auto detect):
@@ -266,11 +267,7 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->              : pthread
 
 
-[CBI] -> Compilation parallel (12 threads)
-
-[Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
-[Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/mainAnimable.cpp
-[Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/mainImage.cpp
+[Student_Cuda_Image_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/mainImageDemo.cpp
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc16/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_gcc_cuda_70_x86_64.run
 
@@ -375,5 +372,5 @@ Cuda compilation tools, release 7.0, V7.0.27
 
 [CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_Image_gcc_cuda_70_x86_64.run
 
-[CBI] -> Student_Cuda_Image_gcc_cuda_70_x86_64 : End ALL!
+[CBI] -> Student_Cuda_Image_gcc_cuda_70_x86_64   : End ALL!
 

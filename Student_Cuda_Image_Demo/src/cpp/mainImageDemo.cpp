@@ -53,9 +53,9 @@ int mainImageDemo(Settings& settings)
     ImageOption zoomable(true);
     ImageOption nozoomable(false);
 
-    Viewer<RipplingProvider> vague(nozoomable, 25, 25); // imageOption px py
-    Viewer<MandelbrotProvider> vague(zoomable, 25, 25); // imageOption px py
-    Viewer<JuliaProvider> vague(zoomable, 25, 25); // imageOption px py
+    Viewer<RipplingProvider> rippling(nozoomable, 25, 25); // imageOption px py
+    Viewer<MandelbrotProvider> mandelbrot(zoomable, 25, 25); // imageOption px py
+    Viewer<JuliaProvider> julia(zoomable, 25, 25); // imageOption px py
 
     // Common
     GLUTImageViewers::runALL(); // Bloquant, Tant qu'une fenetre est ouverte

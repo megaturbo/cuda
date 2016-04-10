@@ -24,7 +24,7 @@ using namespace gpu;
  */
 Animable_I<uchar4>* MandelbrotProvider::createAnimable(void)
 {
-	int n = 12;
+	int n = 102;
 	DomaineMath domaineMath = DomaineMath(-2.1, -1.3, 0.8, 1.3);
 
 //	int n = 102;

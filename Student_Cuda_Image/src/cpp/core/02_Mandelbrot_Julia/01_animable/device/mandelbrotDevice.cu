@@ -24,7 +24,7 @@ using namespace gpu;
  |*		Public			*|
  \*-------------------------------------*/
 
-__global__ void mandelbrot(uchar4* ptrDevPixels, uint w, uint h, float t, uint n, const DomaineMath &domaine);
+__global__ void mandelbrot(uchar4* ptrDevPixels, uint w, uint h, float t, uint n, DomaineMath domaine);
 
 /*--------------------------------------*\
  |*		Private			*|
@@ -39,7 +39,7 @@ __global__ void mandelbrot(uchar4* ptrDevPixels, uint w, uint h, float t, uint n
  \*-------------------------------------*/
 
 __global__ void mandelbrot(uchar4* ptrDevPixels, uint w, uint h, float t,
-		uint n, const DomaineMath &domaineMath)
+		uint n, DomaineMath domaineMath)
 {
 	MandelbrotMath mandelbrotMath = MandelbrotMath(n);
 

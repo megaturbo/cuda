@@ -49,8 +49,8 @@ int mainAnimable(Settings& settings)
     {
     cout << "\n[Animable] mode" << endl;
 
-//    rippling();
-     mandelbrot();
+    rippling();
+//     mandelbrot();
 
     cout << "\n[Animable] end" << endl;
 

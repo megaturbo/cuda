@@ -1,4 +1,4 @@
-11:08:07 **** Build of configuration IntelLinux_parallel for project Student_OMP_Image ****
+17:13:37 **** Incremental Build of configuration IntelLinux_parallel for project Student_OMP_Image ****
 makeIntelLinux.sh jall 
 
 --------------------------------------------------------
@@ -1567,7 +1567,7 @@ ipo: warning #11021: unresolved gst_caps_set_simple
 [CBI] ->
 [CBI] -> Compilateur  : INTEL (icpc)
 [CBI] -> Task	      : End Compiling-Linking !
-[CBI] -> Time		  : 6 (s)
+[CBI] -> Time		  : 7 (s)
 ==================================================================================
 
 
@@ -1576,5 +1576,5 @@ ipo: warning #11021: unresolved gst_caps_set_simple
 [CBI] -> Student_OMP_Image_intel_x86_64 : End ALL!
 
 
-11:08:13 Build Finished (took 6s.380ms)
+17:13:44 Build Finished (took 6s.970ms)
 
