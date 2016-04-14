@@ -1,0 +1,24 @@
+#pragma once
+
+template<typename T>
+class ReduceTools
+{
+public:
+	ReduceTools(int n)
+	{
+		this->n = n;
+	}
+
+private:
+	void reduceIntraBlock(T tabSM, T* ptrDevResult)
+	{
+		int half = n / 2;
+		while (n > 1)
+		{
+
+		}
+	}
+
+// Input
+	int n;
+};

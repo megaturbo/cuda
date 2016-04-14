@@ -1,0 +1,28 @@
+#pragma once
+
+#include "cudaTools.h"
+
+template<typename T>
+class ReduceTools
+{
+public:
+	ReduceTools(int n)
+	{
+		this->n = n;
+	}
+
+private:
+	void reduceIntraBlock(T tabSM, T* ptrDevResult)
+	{
+		int half = n / 2;
+		while (n > 1)
+		{
+			crush(tabSM, half);
+			half /= 2;
+			__syncthread()
+		}
+	}
+
+// Input
+	int n;
+};

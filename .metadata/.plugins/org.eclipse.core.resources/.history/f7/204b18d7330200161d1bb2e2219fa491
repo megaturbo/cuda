@@ -1,0 +1,14 @@
+#pragma once
+
+template<typename T>
+class ReduceTools
+{
+public:
+	ReduceTools();
+
+private:
+	void reduceIntraBlock(T tabSM, T* ptrDevResult)
+	{
+		for(int i = 0; i < )
+	}
+};

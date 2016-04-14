@@ -1,0 +1,10 @@
+#pragma once
+
+template<typename T>
+class ReduceTools
+{
+public:
+
+private:
+	reduceIntraBlock()
+};
