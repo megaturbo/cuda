@@ -1,0 +1,24 @@
+#pragma once
+
+#include "cudaTools.h"
+
+class Slice
+{
+public:
+	Slice(int nbSlice);
+	virtual ~Slice(void);
+
+	void run();
+
+private:
+	// Inputs
+	int nbSlice;
+
+	// Output
+
+
+	// Tools
+	dim3 dg;
+	dim3 db;
+	size_t
+};

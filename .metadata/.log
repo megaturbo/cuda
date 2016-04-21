@@ -11158,3 +11158,13 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.debug.core 4 120 2016-04-10 16:39:34.565
 !MESSAGE Variable references empty selection: ${project_loc}
+!SESSION 2016-04-21 12:39:46.039 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_72
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-04-21 12:40:00.771
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

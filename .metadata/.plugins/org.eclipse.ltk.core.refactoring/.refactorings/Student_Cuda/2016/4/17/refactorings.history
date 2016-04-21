@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Student_Cuda/src/cpp/core/03_Slice/useAddVector.cpp&apos; to &apos;useSlice.cpp&apos;" description="Rename resource &apos;useAddVector.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/core/03_Slice/useAddVector.cpp" name="useSlice.cpp" stamp="1461239183544" updateReferences="true"/>
+</session>

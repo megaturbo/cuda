@@ -1,4 +1,4 @@
-09:31:47 **** Build of configuration CudaGCC_parallel for project Student_Cuda ****
+15:20:17 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 makeCudaGCC.sh jall 
 
 --------------------------------------------------------
@@ -17,6 +17,7 @@ makeCudaGCC.sh jall
 [Runtime] : BOOST   : /opt/api/ext/boost/[user-version]/lib/gcc
 [Runtime] : OpenCV  : /opt/api/ext/opencv/[user-version]/lib
 [Runtime] : CppTest : /opt/api/ext/cpptest/[user-version]/LIB-STATIC/gcc
+[Runtime] : gphoto2  : /opt/api/ext/gphoto2/[user-version]/lib
 
 [Runtime] : bilat_tools
 [Runtime] : bilat_fenetrage
@@ -31,7 +32,7 @@ makeCudaGCC.sh jall
 --------------------------------------------------------
 
 
-g++ (Ubuntu 4.8.4-2ubuntu1~14.04) 4.8.4
+g++ (Ubuntu 4.8.4-2ubuntu1~14.04.1) 4.8.4
 Copyright (C) 2013 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -49,13 +50,13 @@ Cuda compilation tools, release 7.0, V7.0.27
 ==================================================================================
 [CBI] -> Target Name  : Student_Cuda_gcc_cuda_70_x86_64
 [CBI] ->
-[CBI] -> Build        : /tmp/ramdrive/bilat/Targets/Student_Cuda/bin/Student_Cuda_gcc_cuda_70_x86_64.run
+[CBI] -> Build        : /tmp/ramdrive/arc16/Targets/Student_Cuda/bin/Student_Cuda_gcc_cuda_70_x86_64.run
 [CBI] -> Deploy       : ../RELEASE/bin
 [CBI] ->
 [CBI] -> Type	      : EXE
 [CBI] -> Arch	      : x86_64
 [CBI] -> OS	 		  : Linux
-[CBI] -> User	 	  : bilat
+[CBI] -> User	 	  : arc16
 [CBI] ->
 [CBI] -> Task		  : Compiling-Linking !
 ==================================================================================
@@ -100,8 +101,10 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/host/
 [CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/mixte/
 [CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/nvidia/
+[CBI] ->              : src/cpp/core/
 [CBI] ->              : src/cpp/core/02_Hello_add_vector/00_tools/
 [CBI] ->              : src/cpp/core/02_Hello_add_vector/01_objet/host/
+[CBI] ->              : src/cpp/core/03_Slice/host/
 [CBI] ->              : src/cpp/test/junit/01_Test_Hello/
 [CBI] ->              : src/cpp/test/junit/02_Test_Vector/
 
@@ -143,40 +146,12 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->              : nvrtc-builtins
 [CBI] ->              : pthread
 
-[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Student_Cuda/bin
-[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Student_Cuda/obj
-[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Student_Cuda/cubin
 
-[CBI] -> Compilation parallel (12 threads)
+[CBI] -> Compilation parallel (32 threads)
 
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/01_Test_Hello/TestHello.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/02_Test_Vector/TestVector.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/01_objet/useAddVector.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/00_tools/VectorTools.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Hello/useHello.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/AleaTools.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Chrono.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Fps.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/LimitsTools.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/MathTools.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Progress.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/StringTools.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/TabTools.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/ColorTools_CPU.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/IndiceTools_CPU.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_Cuda/src/core/cudatools/header/host/Options.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_Cuda/src/core/cudatools/cpp/host/cudaTools.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_Cuda/src/core/cudatools/cpp/host/Device.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_Cuda/src/core/cudatools/cpp/host/Grid.cpp
-[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/device/addVector_device.cu
-[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/host/AddVector.cu
-[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/01_helloCuda.cu
-[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/02_hello_add.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/host/Slice.cu
 
-[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/Student_Cuda/bin/Student_Cuda_gcc_cuda_70_x86_64.run
+[CBI] -> Linking to   : /tmp/ramdrive/arc16/Targets/Student_Cuda/bin/Student_Cuda_gcc_cuda_70_x86_64.run
 
 [CBI] -> Library Link :
 [CBI] ->
@@ -233,13 +208,13 @@ Cuda compilation tools, release 7.0, V7.0.27
 
 ==================================================================================
 [CBI] -> Target Name  : Student_Cuda_gcc_cuda_70_x86_64
-[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/Student_Cuda/bin/Student_Cuda_gcc_cuda_70_x86_64.run
+[CBI] -> Location     : /tmp/ramdrive/arc16/Targets/Student_Cuda/bin/Student_Cuda_gcc_cuda_70_x86_64.run
 [CBI] -> Deploy 	  : ../RELEASE/bin
 [CBI] ->
 [CBI] -> Type	 	  : EXE
 [CBI] -> Arch	 	  : x86_64
 [CBI] -> OS	 	      : Linux
-[CBI] -> User	 	  : bilat
+[CBI] -> User	 	  : arc16
 [CBI] ->
 [CBI] -> Compilateur  : g++) && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
@@ -252,5 +227,5 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] -> Student_Cuda_gcc_cuda_70_x86_64 : End ALL!
 
 
-09:31:51 Build Finished (took 4s.121ms)
+15:20:21 Build Finished (took 4s.332ms)
 

@@ -1,0 +1,66 @@
+#include "Indice1d.h"
+#include "cudaTools.h"
+
+#include <stdio.h>
+
+_global__ void slice(int nbSlice);
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+static __device__ float f(int x);
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/**
+ * output : void required !!
+ */
+__global__ void slice(int nbSlice)
+{
+	const int NB_THREAD = Indice2D::nbThread();
+		const int TID = Indice2D::tid();
+
+		// Debug
+		if (TID == 0)
+		{
+			printf("Coucou from device tid&d", TID); //required   Device::synchronize(); after the call of kernel
+		}
+
+		int s = TID;
+		while (s < n)
+		{
+			ptrDevW[s] = ptrDevV1[s] + ptrDevV2[s];
+			s+= NB_THREAD;
+		}
+}
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+__device__
+float f(int x)
+{
+	const int NB_THREAD = Indice2D::nbThread();
+	const int TID = Indice2D::tid();
+
+	// Debug
+	if (TID == 0)
+	{
+		printf("Coucou from device tid&d", TID); //required   Device::synchronize(); after the call of kernel
+	}
+
+	int s = TID;
+	while (s < n)
+	{
+		ptrDevW[s] = ptrDevV1[s] + ptrDevV2[s];
+		s+= NB_THREAD;
+	}
+}

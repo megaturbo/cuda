@@ -3658,3 +3658,4 @@ org.eclipse.jdt.core.JavaModelException: HelloWorldNative.java [in com.bilat.tut
 2016-04-09 11:08:07,116 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
 2016-04-10 13:53:10,609 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
 2016-04-10 22:50:37,015 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-04-21 13:38:16,875 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not available. Remote download required.
