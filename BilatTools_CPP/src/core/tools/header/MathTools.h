@@ -58,7 +58,7 @@ class MathTools
 	static bool isEquals(float* tabA, float* tabB, int n, float epsilon = 0);
 
 	/**
-	 * Relatif par rapport au max de la série
+	 * Relatif par rapport au max de la sï¿½rie
 	 * Hyp: tab de meme size n
 	 */
 	static bool isEqualsRelatifMax(float* tabA, float* tabB, int n, float epsilon = 0);

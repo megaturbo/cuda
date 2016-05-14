@@ -3,7 +3,7 @@
 	<section name="CleanDialogSettings">
 		<item value="575" key="DIALOG_WIDTH"/>
 		<item value="true" key="BUILD_ALL"/>
-		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
 		<item value="644" key="DIALOG_HEIGHT"/>
 		<item value="false" key="BUILD_NOW"/>
 		<item value="24" key="DIALOG_Y_ORIGIN"/>

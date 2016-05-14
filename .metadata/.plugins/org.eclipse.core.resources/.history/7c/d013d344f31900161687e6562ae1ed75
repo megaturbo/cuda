@@ -1,0 +1,15 @@
+#pragma once
+
+#include "cudaTools.h"
+
+class Montecarlo
+{
+public:
+	Montecarlo();
+	virtual ~Montecarlo(void);
+
+	void run();
+
+private:
+
+};

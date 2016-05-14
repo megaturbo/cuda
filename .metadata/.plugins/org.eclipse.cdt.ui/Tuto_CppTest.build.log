@@ -1,5 +1,5 @@
-09:47:01 **** Incremental Build of configuration GCC_parallel for project Tuto_CppTest ****
-makeGCC.sh jall 
+17:30:49 **** Clean-only build of configuration GCC_parallel for project Tuto_CppTest ****
+makeGCC.sh clean 
 
 --------------------------------------------------------
 [Runtime] : gcc x86
@@ -17,6 +17,7 @@ makeGCC.sh jall
 [Runtime] : BOOST   : /opt/api/ext/boost/[user-version]/lib/gcc
 [Runtime] : OpenCV  : /opt/api/ext/opencv/[user-version]/lib
 [Runtime] : CppTest : /opt/api/ext/cpptest/[user-version]/LIB-STATIC/gcc
+[Runtime] : gphoto2  : /opt/api/ext/gphoto2/[user-version]/lib
 
 [Runtime] : bilat_tools
 [Runtime] : bilat_fenetrage
@@ -31,97 +32,27 @@ makeGCC.sh jall
 --------------------------------------------------------
 
 
-g++ (Ubuntu 4.8.4-2ubuntu1~14.04) 4.8.4
+g++ (Ubuntu 4.8.4-2ubuntu1~14.04.1) 4.8.4
 Copyright (C) 2013 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
-[Make] : GCC : jall
+[Make] : GCC : clean
+
 
 ==================================================================================
-[CBI] -> Target Name  : Tuto_CPPTest_gcc_x86_64
+[CBI] -> Target            : Tuto_CPPTest_gcc_x86_64
+[CBI] -> Task			   : DELETE
 [CBI] ->
-[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/Tuto_CPPTest/bin/Tuto_CPPTest_gcc_x86_64.run
-[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] -> Delete .obj       : /tmp/ramdrive/arc16/Targets/Tuto_CPPTest/obj
+[CBI] -> Delete .bin       : /tmp/ramdrive/arc16/Targets/Tuto_CPPTest/bin
+[CBI] -> Delete doc        : /tmp/ramdrive/arc16/Targets/Tuto_CPPTest/doc
 [CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 		  : Linux
-[CBI] -> User	 	  : bilat
-[CBI] ->
-[CBI] -> Task		  : Compiling-Linking
-==================================================================================
-
-[CBI] -> SRC AUX (Recursif) :
-[CBI] ->
-[CBI] ->              : /opt/api/ext/cpptest/112/LIB_STATIC/gcc
-
-[CBI] -> CXXFLAGS (Partial) :
-[CBI] ->
-[CBI] ->              : -O3
-[CBI] ->              : -fomit-frame-pointer
-[CBI] ->              : -frerun-loop-opt
-[CBI] ->              : -march=native
-[CBI] ->              : -std=c++11
-
-[CBI] -> LDFLAGS (Partial) :
-[CBI] ->
-
-[CBI] -> INC_PATH (auto detect):
-[CBI] ->              : src/cpp/core/standard/integer/
-[CBI] ->              : src/cpp/core/standard/scalar/
-[CBI] ->              : src/cpp/test/junit/
-
-[CBI] -> LIB_PATH (auto detect):
-
-[CBI] -> API_INC :
-[CBI] ->              : /opt/api/ext/cpptest/112/INC
-[CBI] ->              : /opt/api/ext/cpptest/112/INC/extension
-
-[CBI] -> API_LIB :
-
-[CBI] -> API_BIN :
-
-[CBI] -> API_LIBRARIES :
-
-[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_CPPTest/bin
-[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_CPPTest/obj
-
-[CBI] -> Compilation parallel (12 threads)
-
-[Tuto_CPPTest_gcc_x86_64] -> g++ compiling .cpp : src/main.cpp
-[Tuto_CPPTest_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
-[Tuto_CPPTest_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
-[Tuto_CPPTest_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/standard/hello.cpp
-[Tuto_CPPTest_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/standard/scalar/scalar.cpp
-[Tuto_CPPTest_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/standard/integer/integer.cpp
-
-[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/Tuto_CPPTest/bin/Tuto_CPPTest_gcc_x86_64.run
-
-[CBI] -> Library Link :
-[CBI] ->              : -lCpp_Test_gcc_x86_64
-
-==================================================================================
-[CBI] -> Target Name  : Tuto_CPPTest_gcc_x86_64
-[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/Tuto_CPPTest/bin/Tuto_CPPTest_gcc_x86_64.run
-[CBI] -> Deploy 	  : ../RELEASE/bin
-[CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 		  : Linux
-[CBI] -> User	 	  : bilat
-[CBI] ->
-[CBI] -> Compilateur  : g++ (g++)
-[CBI] -> Task	      : End Compiling-Linking !
-[CBI] -> Time		  : 1 (s)
+[CBI] -> Delete deploy     : ../RELEASE/bin/Tuto_CPPTest_gcc_x86_64.run
+[CBI] -> Delete deploy doc : ../RELEASE/doc/Tuto_CPPTest_gcc_x86_64.doc.tar.gz
 ==================================================================================
 
 
-[CBI] -> Deploying    : ../RELEASE/bin/Tuto_CPPTest_gcc_x86_64.run
-
-[CBI] -> Tuto_CPPTest_gcc_x86_64 : End ALL!
-
-
-09:47:02 Build Finished (took 715ms)
+17:30:49 Build Finished (took 172ms)
 

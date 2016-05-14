@@ -1,0 +1,16 @@
+#pragma once
+
+#include "cudaTools.h"
+
+class Slice
+{
+public:
+	Slice(int nbSlice);
+	virtual ~Slice(void);
+
+	void run();
+	float getPi();
+
+private:
+
+};

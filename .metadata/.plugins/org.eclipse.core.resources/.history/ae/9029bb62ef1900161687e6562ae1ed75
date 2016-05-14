@@ -1,0 +1,33 @@
+#include "Device.h"
+#include <iostream>
+#include "Montecarlo.h"
+
+using std::cout;
+using std::endl;
+
+extern __global__ void montecarlo(float* ptrDevPi, int nbSlice);
+
+Montecarlo::Montecarlo(int nbSlice) :
+		nbSlice(nbSlice)
+{
+
+}
+
+Montecarlo::~Montecarlo(void)
+{
+}
+
+void Montecarlo::run()
+{
+	Device::lastCudaError("Slice (before)"); // temp debug
+	montecarlo<<<dg,db, sizeOctetSM>>>(ptrDevPi, nbSlice); // assynchrone
+	Device::lastCudaError("Slice (after)"); // temp debug
+
+//	Device::synchronize(); // Temp, only for printf in  GPU
+	{
+		HANDLE_ERROR(
+				cudaMemcpy(&pi, ptrDevPi, sizeOctetPi, cudaMemcpyDeviceToHost)); // barriere synchronisation implicite
+	}
+
+	pi /= nbSlice;
+}

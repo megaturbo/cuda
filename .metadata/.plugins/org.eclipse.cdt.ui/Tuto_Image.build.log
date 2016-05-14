@@ -1,5 +1,5 @@
-10:32:57 **** Build of configuration GCC_parallel for project Tuto_Image ****
-makeGCC.sh jall 
+17:30:50 **** Clean-only build of configuration GCC_parallel for project Tuto_Image ****
+makeGCC.sh clean 
 
 --------------------------------------------------------
 [Runtime] : gcc x86
@@ -38,166 +38,21 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
-[Make] : GCC : jall
+[Make] : GCC : clean
+
 
 ==================================================================================
-[CBI] -> Target Name  : Tuto_Image_gcc_x86_64
+[CBI] -> Target            : Tuto_Image_gcc_x86_64
+[CBI] -> Task			   : DELETE
 [CBI] ->
-[CBI] -> Build     	  : /tmp/ramdrive/arc16/Targets/Tuto_Image/bin/Tuto_Image_gcc_x86_64.run
-[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] -> Delete .obj       : /tmp/ramdrive/arc16/Targets/Tuto_Image/obj
+[CBI] -> Delete .bin       : /tmp/ramdrive/arc16/Targets/Tuto_Image/bin
+[CBI] -> Delete doc        : /tmp/ramdrive/arc16/Targets/Tuto_Image/doc
 [CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 		  : Linux
-[CBI] -> User	 	  : arc16
-[CBI] ->
-[CBI] -> Task		  : Compiling-Linking
-==================================================================================
-
-[CBI] -> SRC AUX (Recursif) :
-[CBI] ->
-[CBI] ->              : ../BilatTools_CPP/src/core
-[CBI] ->              : ../BilatTools_Image/src/core
-[CBI] ->              : ../BilatTools_OMP/src/core
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable/BIN/gcc
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable_GL/BIN/gcc
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/BIN/gcc
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/BIN/gcc
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/BIN/gcc
-[CBI] ->              : /opt/api/cbi/opengl/201/Bilat_OpenGL_Tools/BIN/gcc
-
-[CBI] -> CXXFLAGS (Partial) :
-[CBI] ->
-[CBI] ->              : -O3
-[CBI] ->              : -fomit-frame-pointer
-[CBI] ->              : -fopenmp
-[CBI] ->              : -frerun-loop-opt
-[CBI] ->              : -march=native
-[CBI] ->              : -std=c++11
-
-[CBI] -> LDFLAGS (Partial) :
-[CBI] ->
-
-[CBI] -> INC_PATH (auto detect):
-[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/
-[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/namespace_cpu/
-[CBI] ->              : ../BilatTools_Image/src/core/tools/imp/
-[CBI] ->              : ../BilatTools_Image/src/core/tools/imp/api_animateur/
-[CBI] ->              : ../BilatTools_Image/src/core/tools/imp/api_image_link/
-[CBI] ->              : ../BilatTools_Image/src/core/tools/imp/api_viewer/
-[CBI] ->              : ../BilatTools_Image/src/core/tools/spec/
-[CBI] ->              : ../BilatTools_OMP/src/core/OMP_Tools/header/
-[CBI] ->              : src/core/01_simple_RGBA_uchar4/01_Vague/01_animable/
-[CBI] ->              : src/core/01_simple_RGBA_uchar4/01_Vague/01_animable/math/
-[CBI] ->              : src/core/01_simple_RGBA_uchar4/01_Vague/02_Provider/
-[CBI] ->              : src/core/01_simple_RGBA_uchar4/02_Damier_zoomable/01_animable/
-[CBI] ->              : src/core/01_simple_RGBA_uchar4/02_Damier_zoomable/01_animable/math/
-[CBI] ->              : src/core/01_simple_RGBA_uchar4/02_Damier_zoomable/02_Provider/
-
-[CBI] -> LIB_PATH (auto detect):
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable/BIN/gcc/
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable_GL/BIN/gcc/
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/BIN/gcc/
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/BIN/gcc/
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/BIN/gcc/
-[CBI] ->              : /opt/api/cbi/opengl/201/Bilat_OpenGL_Tools/BIN/gcc/
-
-[CBI] -> API_INC :
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable/INC
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable/INC/primitives
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable_GL/INC
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable_GL/INC/primitives
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/INC
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/INC
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/INC/common
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/INC/cpu
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/INC
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/INC/common
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/INC/cpu
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/INC/extra
-[CBI] ->              : /opt/api/cbi/opengl/201/Bilat_OpenGL_Tools/INC
-[CBI] ->              : /opt/api/cbi/tools/201/Bilat_tools_dll/INC
-[CBI] ->              : /usr/include/X11
-
-[CBI] -> API_LIB :
-[CBI] ->              : /usr/lib/x86_64-linux-gnu
-
-[CBI] -> API_BIN :
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable/BIN/gcc
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_Displayable_GL/BIN/gcc
-[CBI] ->              : /opt/api/cbi/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/BIN/gcc
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_FreeGlut/BIN/gcc
-[CBI] ->              : /opt/api/cbi/image/201/Bilat_Image_GL/BIN/gcc
-[CBI] ->              : /opt/api/cbi/opengl/201/Bilat_OpenGL_Tools/BIN/gcc
-
-[CBI] -> API_LIBRARIES :
-[CBI] ->              : GL
-[CBI] ->              : GLEW
-[CBI] ->              : GLU
-[CBI] ->              : X11
-
-[CBI] -> Create folder : /tmp/ramdrive/arc16/Targets/Tuto_Image/bin
-[CBI] -> Create folder : /tmp/ramdrive/arc16/Targets/Tuto_Image/obj
-
-[CBI] -> Compilation parallel (12 threads)
-
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : src/main.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/mainAnimable.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/mainImage.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/01_simple_RGBA_uchar4/01_Vague/02_Provider/VagueProvider.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/01_simple_RGBA_uchar4/01_Vague/01_animable/Vague.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/01_simple_RGBA_uchar4/02_Damier_zoomable/02_Provider/DamierProvider.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/01_simple_RGBA_uchar4/02_Damier_zoomable/01_animable/Damier.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/AleaTools.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Chrono.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Fps.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/LimitsTools.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/MathTools.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Progress.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/StringTools.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/TabTools.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/ColorTools_CPU.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/IndiceTools_CPU.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_OMP/src/core/OMP_Tools/cpp/OmpTools.cpp
-[Tuto_Image_gcc_x86_64] -> g++ compiling .cpp : ../BilatTools_Image/src/core/tools/imp/Settings_CPU.cpp
-
-[CBI] -> Linking to   : /tmp/ramdrive/arc16/Targets/Tuto_Image/bin/Tuto_Image_gcc_x86_64.run
-
-[CBI] -> Library Link :
-[CBI] ->              : -L/usr/lib/x86_64-linux-gnu
-[CBI] ->              : -lBilat_Fenetrage_Displayable_201_gcc_x86_64
-[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_201_gcc_x86_64
-[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_201_gcc_x86_64
-[CBI] ->              : -lBilat_Image_FreeGlut_201_gcc_x86_64
-[CBI] ->              : -lBilat_Image_GL_201_gcc_x86_64
-[CBI] ->              : -lBilat_OpenGL_Tools_201_gcc_x86_64
-[CBI] ->              : -lGL
-[CBI] ->              : -lGLEW
-[CBI] ->              : -lGLU
-[CBI] ->              : -lX11
-[CBI] ->              : -lglut
-[CBI] ->              : -lgomp
-
-==================================================================================
-[CBI] -> Target Name  : Tuto_Image_gcc_x86_64
-[CBI] -> Location     : /tmp/ramdrive/arc16/Targets/Tuto_Image/bin/Tuto_Image_gcc_x86_64.run
-[CBI] -> Deploy 	  : ../RELEASE/bin
-[CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 		  : Linux
-[CBI] -> User	 	  : arc16
-[CBI] ->
-[CBI] -> Compilateur  : g++ (g++)
-[CBI] -> Task	      : End Compiling-Linking !
-[CBI] -> Time		  : 1 (s)
+[CBI] -> Delete deploy     : ../RELEASE/bin/Tuto_Image_gcc_x86_64.run
+[CBI] -> Delete deploy doc : ../RELEASE/doc/Tuto_Image_gcc_x86_64.doc.tar.gz
 ==================================================================================
 
 
-[CBI] -> Deploying    : ../RELEASE/bin/Tuto_Image_gcc_x86_64.run
-
-[CBI] -> Tuto_Image_gcc_x86_64 : End ALL!
-
-
-10:32:58 Build Finished (took 1s.165ms)
+17:30:50 Build Finished (took 273ms)
 

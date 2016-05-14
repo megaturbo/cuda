@@ -13,8 +13,8 @@ using std::endl;
  |*		Imported	 	*|
  \*-------------------------------------*/
 
-extern bool useHello(void);
-extern bool useAddVecteur(void);
+//extern bool useHello(void);
+//extern bool useAddVecteur(void);
 extern bool useSlice(void);
 
 /*--------------------------------------*\

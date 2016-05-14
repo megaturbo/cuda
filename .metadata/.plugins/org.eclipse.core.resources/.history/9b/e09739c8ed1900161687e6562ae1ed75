@@ -1,0 +1,12 @@
+#pragma once
+
+#include "cudaTools.h"
+
+class Slice
+{
+public:
+
+
+private:
+
+};

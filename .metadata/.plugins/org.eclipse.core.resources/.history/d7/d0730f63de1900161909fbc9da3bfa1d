@@ -1,0 +1,58 @@
+#pragma once
+
+#include "Indice1D.h"
+#include "cudaTools.h"
+
+template<typename T>
+class ReduceTools
+{
+public:
+	__device__
+	ReduceTools(int nbThreadLocal)
+	{
+		this->nbThreadLocal = nbThreadLocal;
+	}
+
+	__device__
+	virtual ~ReduceTools()
+	{
+	}
+
+	__device__
+	void reduceIntraBlock(T* tabSM)
+	{
+		int half = nbThreadLocal / 2;
+		while (nbThreadLocal > 1)
+		{
+			crush(tabSM, half);
+			half /= 2;
+			__syncthreads();
+		}
+	}
+
+	__device__
+	void reduceInterBlock(T* tabSM, T* ptrDevResult)
+	{
+		if (Indice2D::tidLocal() ==  0)
+		{
+			atomicAdd(ptrDevResult, tabSM[0]);
+		}
+	}
+
+
+private:
+	__device__
+	void crush(T* tabSM, int half)
+	{
+		const int TID_LOCAL = Indice2D::tidLocal();
+		int s = TID;
+		while (s < half)
+		{
+			tabSM[s] += tabSM[s + half];
+			s += nbThreadLocal;
+		}
+	}
+
+// Input
+	int n;
+};

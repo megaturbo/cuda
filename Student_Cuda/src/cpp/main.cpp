@@ -45,72 +45,72 @@ static int start(Options& option);
  \*-------------------------------------*/
 
 int main(void)
-    {
-    // LimitsTools::rappelTypeSize();
+{
+	// LimitsTools::rappelTypeSize();
 
-    // Server Cuda1: in [0,5]	(6 Devices)
-    // Server Cuda2: in [0,3]	(4 Devices)
-    // Server Cuda3: in [0,2]	(2 Devices)
-    int DEVICE_ID = 0;
-    bool IS_TEST = false;
+	// Server Cuda1: in [0,5]	(6 Devices)
+	// Server Cuda2: in [0,3]	(4 Devices)
+	// Server Cuda3: in [0,2]	(2 Devices)
+	int DEVICE_ID = 1;
+	bool IS_TEST = false;
 
-    Options option(IS_TEST, DEVICE_ID);
+	Options option(IS_TEST, DEVICE_ID);
 
-    return use(option);
-    }
+	return use(option);
+}
 
 int use(Options& option)
-    {
-    if (Device::isCuda())
+{
+	if (Device::isCuda())
 	{
-	initCuda(option);
+		initCuda(option);
 
-	int isOk = start(option);
+		int isOk = start(option);
 
-	HANDLE_ERROR(cudaDeviceReset()); //cudaDeviceReset causes the driver to clean up all state. While not mandatory in normal operation, it is good practice.
+		HANDLE_ERROR(cudaDeviceReset()); //cudaDeviceReset causes the driver to clean up all state. While not mandatory in normal operation, it is good practice.
 
-	return isOk;
+		return isOk;
 	}
-    else
+	else
 	{
-	return EXIT_FAILURE;
+		return EXIT_FAILURE;
 	}
-    }
+}
 
 void initCuda(Options& option)
-    {
-    // Check deviceId area
-    int nbDevice = Device::getDeviceCount();
-    int deviceId = option.getDeviceId();
-    assert(deviceId >= 0 && deviceId < nbDevice);
+{
+	// Check deviceId area
+	int nbDevice = Device::getDeviceCount();
+	int deviceId = option.getDeviceId();
+	assert(deviceId >= 0 && deviceId < nbDevice);
 
-    // Choose current device (state of host-thread)
-    HANDLE_ERROR(cudaSetDevice(deviceId));
+	// Choose current device (state of host-thread)
+	HANDLE_ERROR(cudaSetDevice(deviceId));
 
-    // It can be usefull to preload driver, by example to practice benchmarking! (sometimes slow under linux)
-    Device::loadCudaDriver(deviceId);
-    // Device::loadCudaDriverAll();// Force driver to be load for all GPU
-    }
+	// It can be usefull to preload driver, by example to practice benchmarking! (sometimes slow under linux)
+	Device::loadCudaDriver(deviceId);
+	// Device::loadCudaDriverAll();// Force driver to be load for all GPU
+}
 
 int start(Options& option)
-    {
-    // print
+{
+	// print
 	{
-	// Device::printAll();
-	Device::printAllSimple();
-	Device::printCurrent();
-	//Device::print(option.getDeviceId());
+		// Device::printAll();
+		Device::printAllSimple();
+		Device::printCurrent();
+		//Device::print(option.getDeviceId());
 	}
 
-    if (option.isTest())
+	if (option.isTest())
 	{
-	return mainTest();
+		return mainTest();
 	}
-    else
+	else
 	{
-	return mainCore();
+		return mainCore();
 	}
-    }
+}
 
 /*----------------------------------------------------------------------*\
  |*			End	 					*|

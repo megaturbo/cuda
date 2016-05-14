@@ -1,5 +1,5 @@
-14:51:57 **** Incremental Build of configuration GCC_parallel for project Student_OMP ****
-makeGCC.sh jall 
+17:30:48 **** Clean-only build of configuration GCC_parallel for project Student_OMP ****
+makeGCC.sh clean 
 
 --------------------------------------------------------
 [Runtime] : gcc x86
@@ -17,6 +17,7 @@ makeGCC.sh jall
 [Runtime] : BOOST   : /opt/api/ext/boost/[user-version]/lib/gcc
 [Runtime] : OpenCV  : /opt/api/ext/opencv/[user-version]/lib
 [Runtime] : CppTest : /opt/api/ext/cpptest/[user-version]/LIB-STATIC/gcc
+[Runtime] : gphoto2  : /opt/api/ext/gphoto2/[user-version]/lib
 
 [Runtime] : bilat_tools
 [Runtime] : bilat_fenetrage
@@ -31,97 +32,27 @@ makeGCC.sh jall
 --------------------------------------------------------
 
 
-g++ (Ubuntu 4.8.4-2ubuntu1~14.04) 4.8.4
+g++ (Ubuntu 4.8.4-2ubuntu1~14.04.1) 4.8.4
 Copyright (C) 2013 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
-[Make] : GCC : jall
+[Make] : GCC : clean
+
 
 ==================================================================================
-[CBI] -> Target Name  : Student_OMP_gcc_x86_64
+[CBI] -> Target            : Student_OMP_gcc_x86_64
+[CBI] -> Task			   : DELETE
 [CBI] ->
-[CBI] -> Build     	  : /tmp/ramdrive/arc16/Targets/Student_OMP/bin/Student_OMP_gcc_x86_64.run
-[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] -> Delete .obj       : /tmp/ramdrive/arc16/Targets/Student_OMP/obj
+[CBI] -> Delete .bin       : /tmp/ramdrive/arc16/Targets/Student_OMP/bin
+[CBI] -> Delete doc        : /tmp/ramdrive/arc16/Targets/Student_OMP/doc
 [CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 		  : Linux
-[CBI] -> User	 	  : arc16
-[CBI] ->
-[CBI] -> Task		  : Compiling-Linking
-==================================================================================
-
-[CBI] -> SRC AUX (Recursif) :
-[CBI] ->
-[CBI] ->              : ../BilatTools_CPP/src/core
-[CBI] ->              : ../BilatTools_OMP/src/core
-[CBI] ->              : /opt/api/ext/cpptest/112/LIB_STATIC/gcc
-
-[CBI] -> CXXFLAGS (Partial) :
-[CBI] ->
-[CBI] ->              : -O3
-[CBI] ->              : -fomit-frame-pointer
-[CBI] ->              : -fopenmp
-[CBI] ->              : -frerun-loop-opt
-[CBI] ->              : -march=native
-[CBI] ->              : -std=c++11
-
-[CBI] -> LDFLAGS (Partial) :
-[CBI] ->
-
-[CBI] -> INC_PATH (auto detect):
-[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/
-[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/namespace_cpu/
-[CBI] ->              : ../BilatTools_OMP/src/core/OMP_Tools/header/
-[CBI] ->              : src/cpp/core/omp/02_Slice/
-[CBI] ->              : src/cpp/test/unit/01_Test_Hello/
-[CBI] ->              : src/cpp/test/unit/02_Test_Pi/
-
-[CBI] -> LIB_PATH (auto detect):
-
-[CBI] -> API_INC :
-[CBI] ->              : /opt/api/ext/cpptest/112/INC
-[CBI] ->              : /opt/api/ext/cpptest/112/INC/extension
-
-[CBI] -> API_LIB :
-
-[CBI] -> API_BIN :
-
-[CBI] -> API_LIBRARIES :
-
-
-[CBI] -> Compilation parallel (12 threads)
-
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_Slice/08_pi_for_reduction.cpp
-
-[CBI] -> Linking to   : /tmp/ramdrive/arc16/Targets/Student_OMP/bin/Student_OMP_gcc_x86_64.run
-
-[CBI] -> Library Link :
-[CBI] ->              : -lCpp_Test_gcc_x86_64
-[CBI] ->              : -lgomp
-
-==================================================================================
-[CBI] -> Target Name  : Student_OMP_gcc_x86_64
-[CBI] -> Location     : /tmp/ramdrive/arc16/Targets/Student_OMP/bin/Student_OMP_gcc_x86_64.run
-[CBI] -> Deploy 	  : ../RELEASE/bin
-[CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 		  : Linux
-[CBI] -> User	 	  : arc16
-[CBI] ->
-[CBI] -> Compilateur  : g++ (g++)
-[CBI] -> Task	      : End Compiling-Linking !
-[CBI] -> Time		  : 1 (s)
+[CBI] -> Delete deploy     : ../RELEASE/bin/Student_OMP_gcc_x86_64.run
+[CBI] -> Delete deploy doc : ../RELEASE/doc/Student_OMP_gcc_x86_64.doc.tar.gz
 ==================================================================================
 
 
-[CBI] -> Deploying    : ../RELEASE/bin/Student_OMP_gcc_x86_64.run
-
-[CBI] -> Student_OMP_gcc_x86_64 : End ALL!
-
-
-14:51:58 Build Finished (took 1s.137ms)
+17:30:49 Build Finished (took 167ms)
 

@@ -1,60 +1,41 @@
 #pragma once
 
-#include "Indice1D.h"
-#include "cudaTools.h"
+#include "Indice2D.h"
 
 template<typename T>
-class ReduceTools
+__device__
+void crush(T* tabSM, int half)
 {
-public:
-	__device__
-	ReduceTools(int n)
+	const int TID_LOCAL = Indice2D::tidLocal();
+	const int NB_THREAD_LOCAL = Indice2D::nbThreadLocal();
+	int s = TID_LOCAL;
+	while (s < half)
 	{
-		this->n = n;
+		tabSM[s] += tabSM[s + half];
+		s += NB_THREAD_LOCAL;
 	}
+}
 
-	__device__
-	virtual ~ReduceTools()
+template<typename T>
+__device__
+void reduceIntraBlock(T* tabSM)
+{
+	const int NB_THREAD_LOCAL = Indice2D::nbThreadLocal();
+	int half = NB_THREAD_LOCAL / 2;
+	while (half >= 1)
 	{
+		crush(tabSM, half);
+		half /= 2;
+		__syncthreads();
 	}
+}
 
-	__device__
-	void reduceIntraBlock(T* tabSM)
+template<typename T>
+__device__
+void reduceInterBlock(T* tabSM, T* ptrDevResult)
+{
+	if (Indice2D::tidLocal() == 0)
 	{
-		int half = n / 2;
-		while (n > 1)
-		{
-			crush(tabSM, half);
-			half /= 2;
-			__syncthreads();
-		}
+		atomicAdd(ptrDevResult, tabSM[0]);
 	}
-
-	__device__
-	void reduceInterBlock(T* tabSM, T* ptrDevResult)
-	{
-		if (Indice1D::tidLocal() ==  0)
-		{
-			atomicAdd(ptrDevResult, tabSM[0]);
-		}
-	}
-
-
-private:
-	__device__
-	void crush(T* tabSM, int half)
-	{
-		const int TID = Indice1D::tidBlock();
-		const int NB_THREAD_BLOCK = Indice1D::nbThreadBlock();
-		int s = TID;
-		while (s < half)
-		{
-			tabSM[s] += tabSM[s + half];
-			s += NB_THREAD_BLOCK;
-			__syncthreads();
-		}
-	}
-
-// Input
-	int n;
-};
+}
