@@ -21,7 +21,7 @@ bool useHistogram()
 	cout << "Tab result:" << endl;
 	for(int i=0; i < SIZE_TAB; i++)
 	{
-		isOk &= (tabResult[i] == repetition);
+		isTabRekt &= (tabResult[i] == repetition);
 		cout << tabResult[i] << ", ";
 	}
 	cout << endl;

@@ -13,7 +13,7 @@ bool useHistogram()
 	int repetition = 3;
 	int tabSize = SIZE_TAB * repetition;
 	int* tabResult;
-	bool isOk = true;
+	bool isTabRekt = true;
 
 	Histogram histogram(tabSize);
 	tabResult = histogram.run();
@@ -21,7 +21,7 @@ bool useHistogram()
 	cout << "Tab result:" << endl;
 	for(int i=0; i < SIZE_TAB; i++)
 	{
-		isOk &= (tabResult[i] == repetition);
+		isTabRekt &= (tabResult[i] == repetition);
 		cout << tabResult[i] << ", ";
 	}
 	cout << endl;
