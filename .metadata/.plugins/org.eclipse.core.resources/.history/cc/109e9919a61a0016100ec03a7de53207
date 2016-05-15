@@ -1,0 +1,21 @@
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+#include "Histogram.h"
+
+bool useHistogram(void);
+
+bool useHistogram()
+{
+	int tabSize = 512;
+	int* tabResult;
+
+	Histogram histogram(tabSize);
+	tabResult = histogram.run();
+
+	cout << "Result =  " << result << endl;
+
+	return true;	// todo beterrerer
+}

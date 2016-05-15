@@ -1,4 +1,4 @@
-13:50:10 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+17:14:11 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 makeCudaGCC.sh jall 
 
 --------------------------------------------------------
@@ -106,6 +106,8 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->              : src/cpp/core/02_Hello_add_vector/01_objet/host/
 [CBI] ->              : src/cpp/core/03_Slice/host/
 [CBI] ->              : src/cpp/core/04_Montercarlo/host/
+[CBI] ->              : src/cpp/core/05_MontecarloMultiGPU/host/
+[CBI] ->              : src/cpp/core/06_Histogram/host/
 [CBI] ->              : src/cpp/test/junit/01_Test_Hello/
 [CBI] ->              : src/cpp/test/junit/02_Test_Vector/
 
@@ -147,10 +149,49 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->              : nvrtc-builtins
 [CBI] ->              : pthread
 
+[CBI] -> Create folder : /tmp/ramdrive/arc16/Targets/Student_Cuda/bin
+[CBI] -> Create folder : /tmp/ramdrive/arc16/Targets/Student_Cuda/obj
+[CBI] -> Create folder : /tmp/ramdrive/arc16/Targets/Student_Cuda/cubin
 
 [CBI] -> Compilation parallel (32 threads)
 
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/01_Test_Hello/TestHello.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/02_Test_Vector/TestVector.cpp
 [Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/06_Histogram/useHistogram.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montercarlo/useMontecarlo.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/05_MontecarloMultiGPU/useMulticarlo.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/00_tools/VectorTools.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/01_objet/useAddVector.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Hello/useHello.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/useSlice.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/AleaTools.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Chrono.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Fps.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/LimitsTools.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/MathTools.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Progress.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/StringTools.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/TabTools.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/ColorTools_CPU.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/IndiceTools_CPU.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_Cuda/src/core/cudatools/header/host/Options.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_Cuda/src/core/cudatools/cpp/host/cudaTools.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_Cuda/src/core/cudatools/cpp/host/Device.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : ../BilatTools_Cuda/src/core/cudatools/cpp/host/Grid.cpp
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/06_Histogram/device/HistogramDevice.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/06_Histogram/host/Histogram.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montercarlo/device/MontecarloDevice.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montercarlo/host/Montecarlo.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/05_MontecarloMultiGPU/host/Multicarlo.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/device/addVector_device.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/host/AddVector.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/01_helloCuda.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/02_hello_add.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/device/SliceDevice.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/host/Slice.cu
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc16/Targets/Student_Cuda/bin/Student_Cuda_gcc_cuda_70_x86_64.run
 
@@ -219,7 +260,7 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->
 [CBI] -> Compilateur  : g++) && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 1 (s)
+[CBI] -> Time		  : 6 (s)
 ==================================================================================
 
 

@@ -1,0 +1,32 @@
+#pragma once
+
+#include "cudaTools.h"
+
+class Histogram
+{
+
+public:
+
+	Histogram(int tabSize);
+	virtual ~Histogram(void);
+
+public:
+
+	float run();
+
+private:
+
+	// Tools
+	int tabSize;
+	int *ptrTabData;
+
+	int *result;
+
+	dim3 dg, db;
+	int *ptrDevResult;
+	int *ptrTabIn;
+
+	size_t sizeOctetData;
+	size_t sizeOctetResult;
+
+};

@@ -1,0 +1,28 @@
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+/* ========== IMPORTED ========== */
+
+#include "histogram.h"
+
+/* ========== DECLARATION ========== */
+/* ========== PUBLIC ========== */
+
+/* ========== IMPLEMENTATION ========== */
+/* ========== PUBLIC ========== */
+bool useHistogram(void);
+
+bool useHistogram()
+{
+	int tabSize = 256;
+	float result;
+
+	Histogram histogram(tabSize);
+	result = histogram.run();
+
+	cout << "Result =  " << result << endl;
+
+	return true;
+}

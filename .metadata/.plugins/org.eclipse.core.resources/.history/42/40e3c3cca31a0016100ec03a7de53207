@@ -1,0 +1,44 @@
+#include "Indice2D.h"
+#include "cudaTools.h"
+#include <stdio.h>
+
+#include "ReduceTools.h"
+
+__global__ void histogram(int* ptrTabData, int tabSize, int *ptrDevResult);
+
+static __device__ void reductionIntraThread(int *ptrTabData, int tabSize, int *tabSM);
+
+__global__ void histogram(int* ptrTabData, int tabSize, int *ptrDevResult)
+{
+	extern __shared__ int tabSM[];
+	if(Indice2D::tidLocal() == 0)
+	{
+		printf("TABSMSIZE: %d", sizeof(tabSM)/sizeof(*tabSM));
+	}
+
+	reductionIntraThread(ptrTabData, tabSize, tabSM);
+	__syncthreads();
+
+	if (Indice2D::tidLocal() == 0)
+	{
+		for (int i = 0; i < 256; i++)
+		{
+			atomicAdd(&ptrDevResult[i], tabSM[i]);
+//			printf("%d, ", ptrDevResult[i]);
+		}
+	}
+}
+__device__ void reductionIntraThread(int *ptrTabData, int tabSize, int *tabSM)
+{
+	const int NB_THREAD = Indice2D::nbThread();
+	const int TID_LOCAL = Indice2D::tidLocalBlock();
+	const int TID = Indice2D::tid();
+
+	int s = TID;
+
+	while (s < tabSize)
+	{
+//		atomicAdd(&tabSM[ptrTabData[s]], 1);
+		s += NB_THREAD;
+	}
+}

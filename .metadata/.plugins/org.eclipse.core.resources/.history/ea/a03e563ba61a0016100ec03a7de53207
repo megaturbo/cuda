@@ -1,0 +1,27 @@
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+#include "Histogram.h"
+
+bool useHistogram(void);
+
+bool useHistogram()
+{
+	int repetition = 2;
+	int tabSize = 512;
+	int* tabResult;
+	bool isTabRekt = true;
+
+	Histogram histogram(tabSize);
+	tabResult = histogram.run();
+
+	cout << "Tab result:" << endl;
+	for(int i=0; i < 256; i++)
+	{
+		cout << tabResult[i] << ", ";
+	}
+
+	return true;	// todo beterrerer
+}

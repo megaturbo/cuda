@@ -1,1 +1,5 @@
 1463313965667	Rename resource 'Histogram.cpp'
+1463322421163	Rename resource 'useMontecarlo.cpp'
+1463322473098	Rename resource 'Montecarlo.cu'
+1463322566111	Rename resource 'Montecarlo.h'
+1463322598724	Rename resource 'MontecarloDevice.cu'

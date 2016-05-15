@@ -99,5 +99,5 @@ __device__ float toAB(float x, float a, float b)
 
 __device__ float f(float x)
 {
-	return sqrt(1.0f - x * x);
+	return sqrtf(1.0f - x * x);
 }

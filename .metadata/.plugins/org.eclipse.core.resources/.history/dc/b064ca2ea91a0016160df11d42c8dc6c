@@ -1,0 +1,23 @@
+#include <iostream>
+#include <limits.h>
+
+using std::cout;
+using std::endl;
+
+#include "host/Multicarlo.h"
+
+bool useMulticarlo(void);
+
+bool useMontecarlo()
+{
+	float a = -1.0f;
+	float b = 1.0f;
+	float M = 1.0f;
+	int nbFlechettes = INT_MAX / 10;
+
+	Multicarlo multicarlo(a, b, M, nbFlechettes);
+	multicarlo.run();
+	cout << "Pi = " << multicarlo.getPi() << endl;
+
+	return true; //TODO
+}

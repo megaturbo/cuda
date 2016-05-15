@@ -1,0 +1,127 @@
+#include "Multicarlo.h"
+
+#include <iostream>
+#include <curand_kernel.h>
+
+#include "Device.h"
+
+using std::cout;
+using std::endl;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void montecarlo(curandState* ptrTabDevGeneratorGM,int* ptrDevN0, float a, float b, float M, int nbFlechettes);
+extern __global__ void setup_kernel_rand(curandState* tabGeneratorThread, int deviceId);
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Constructeur			*|
+ \*-------------------------------------*/
+
+Multicarlo::Multicarlo(float a, float b, float M, int nbFlechettes) :
+		a(a), b(b), M(M), nbFlechettes(nbFlechettes)
+{
+	nbDevice = Device::getDeviceCount();
+//	nbDevice = 3;
+
+	// Grid
+
+	this->dg = dim3(16, 2, 1); // disons, a optimiser selon le gpu
+	this->db = dim3(32, 4, 1); // Une puissance de 2 !
+
+	Device::gridHeuristic(dg, db);
+
+	N0 = new int[nbDevice];
+	ptrDevN0 = new int*[nbDevice];
+	ptrTabDevGeneratorGM = new curandState*[nbDevice];
+
+	this->sizeOctetTabGenerator = dg.x * dg.y * dg.z * db.x * db.y * db.z
+			* sizeof(curandState); // octet
+	this->sizeOctetN0 = sizeof(int);
+	this->sizeSM = db.x * db.y * db.z * sizeof(int);
+
+	for (int i = 0; i < nbDevice; i++)
+	{
+		HANDLE_ERROR(cudaSetDevice(i));
+
+		HANDLE_ERROR(cudaMalloc(&ptrDevN0[i], sizeOctetN0));
+		HANDLE_ERROR(cudaMalloc(&ptrTabDevGeneratorGM[i], sizeOctetTabGenerator));
+		// C'est là qu'il y a un résultat, on pourrait faire foirer des trucs
+		HANDLE_ERROR(cudaMemset(ptrDevN0[i], 0, sizeOctetN0));
+		Device::lastCudaError("Multicarlo MM (end allocation)"); // temp debug
+		setup_kernel_rand<<<dg, db>>>(ptrTabDevGeneratorGM[i], Device::getDeviceId());
+
+	}
+
+}
+
+Multicarlo::~Multicarlo(void)
+{
+	//MM (device free)
+	for (int i = 0; i < nbDevice; i++)
+	{
+		HANDLE_ERROR(cudaSetDevice(i));
+
+		HANDLE_ERROR(cudaFree(ptrDevN0[i]));
+		HANDLE_ERROR(cudaFree(ptrTabDevGeneratorGM[i]));
+
+		Device::lastCudaError("Multicarlo MM (end deallocation)"); // temp debug
+
+	}
+	delete[] ptrDevN0;
+	delete[] ptrTabDevGeneratorGM;
+	delete[] N0;
+}
+
+/*--------------------------------------*\
+ |*		Methode			*|
+ \*-------------------------------------*/
+
+float Multicarlo::getPi()
+{
+	return this->pi;
+}
+
+void Multicarlo::run()
+{
+	int ntotal = 0;
+#pragma omp parallel for reduction (+:ntotal)
+	for (int i = 0; i < nbDevice; i++)
+	{
+		HANDLE_ERROR(cudaSetDevice(i));
+
+		Device::lastCudaError("Multicarlo (before)"); // temp debug
+		montecarlo<<<dg,db, sizeSM>>>(ptrTabDevGeneratorGM[i], ptrDevN0[i], a, b, M, nbFlechettes); // assynchrone
+		Device::lastCudaError("Multicarlo (after)"); // temp debug
+		HANDLE_ERROR(cudaMemcpy(&N0[i], ptrDevN0[i], sizeOctetN0, cudaMemcpyDeviceToHost)); // barriere synchronisation implicite
+		ntotal += N0[i];
+	}
+
+	float delta = fabsf(b - a);
+	float rektArea = M * delta;
+	float ratioFlechette = ntotal / (float) nbFlechettes / nbDevice;
+	pi = 2.0f * rektArea * ratioFlechette;
+
+	Device::synchronize(); // Temp, only for printf in  GPU
+
+	// MM (Device -> Host)
+
+
+}

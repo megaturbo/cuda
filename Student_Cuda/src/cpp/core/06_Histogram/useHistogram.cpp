@@ -1,48 +1,30 @@
 #include <iostream>
-#include <limits.h>
 
 using std::cout;
 using std::endl;
 
-/*----------------------------------------------------------------------*\
- |*			Declaration 					*|
- \*---------------------------------------------------------------------*/
-
-/*--------------------------------------*\
- |*		Imported	 	*|
- \*-------------------------------------*/
-
-#include "host/Histogram.h"
-
-/*--------------------------------------*\
- |*		Public			*|
- \*-------------------------------------*/
+#include "Histogram.h"
 
 bool useHistogram(void);
 
-/*--------------------------------------*\
- |*		Private			*|
- \*-------------------------------------*/
-
-/*----------------------------------------------------------------------*\
- |*			Implementation 					*|
- \*---------------------------------------------------------------------*/
-
-/*--------------------------------------*\
- |*				Public					*|
- \*-------------------------------------*/
-
 bool useHistogram()
 {
-	Histogram histogram();
-	histogram.run();
-	return true; //TODO
+	const int SIZE_TAB = 256;	// hardcode op
+	int repetition = 3;
+	int tabSize = SIZE_TAB * repetition;
+	int* tabResult;
+	bool isTabRekt = true;
+
+	Histogram histogram(tabSize);
+	tabResult = histogram.run();
+
+	cout << "Tab result:" << endl;
+	for(int i=0; i < SIZE_TAB; i++)
+	{
+		isTabRekt &= (tabResult[i] == repetition);
+		cout << tabResult[i] << ", ";
+	}
+	cout << endl;
+
+	return isTabRekt;
 }
-
-/*--------------------------------------*\
- |*		Private			*|
- \*-------------------------------------*/
-
-/*----------------------------------------------------------------------*\
- |*			End	 					*|
- \*---------------------------------------------------------------------*/

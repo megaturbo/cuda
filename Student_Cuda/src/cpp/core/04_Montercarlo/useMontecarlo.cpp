@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits.h>
+#include "MathTools.h"
 
 using std::cout;
 using std::endl;
@@ -41,9 +42,10 @@ bool useMontecarlo()
 
 	Montecarlo montecarlo(a, b, M, nbFlechettes);
 	montecarlo.run();
-	cout << "Pi = " << montecarlo.getPi() << endl;
+	float pi = montecarlo.getPi();
+	cout << "Pi = " << pi << endl;
 
-	return true; //TODO
+	return MathTools::isEquals(pi, PI_FLOAT, 0.01f);
 }
 
 /*--------------------------------------*\
