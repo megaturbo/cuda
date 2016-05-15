@@ -16,7 +16,7 @@ using std::endl;
  |*		Imported	 	*|
  \*-------------------------------------*/
 
-extern __global__ void montecarlo(curandState* ptrTabDevGeneratorGM,int* ptrDevN0, int nbFlechettes);
+extern __global__ void montecarlo(curandState* ptrTabDevGeneratorGM,int* ptrDevN0, float a, float b, float M, int nbFlechettes);
 extern __global__ void setup_kernel_rand(curandState* tabGeneratorThread, int deviceId);
 
 /*--------------------------------------*\
@@ -35,8 +35,8 @@ extern __global__ void setup_kernel_rand(curandState* tabGeneratorThread, int de
  |*		Constructeur			*|
  \*-------------------------------------*/
 
-Montecarlo::Montecarlo(float M, int nbFlechettes) :
-		M(M), nbFlechettes(nbFlechettes)
+Montecarlo::Montecarlo(float a, float b, float M, int nbFlechettes) :
+		a(a), b(b), M(M), nbFlechettes(nbFlechettes)
 {
 
 	// Grid
@@ -47,8 +47,7 @@ Montecarlo::Montecarlo(float M, int nbFlechettes) :
 		Device::gridHeuristic(dg, db);
 	}
 
-	this->sizeOctetTabGenerator = dg.x * dg.y * dg.z * db.x * db.y * db.z
-			* sizeof(curandState); // octet
+	this->sizeOctetTabGenerator = dg.x * dg.y * dg.z * db.x * db.y * db.z * sizeof(curandState); // octet
 	this->sizeOctetN0 = sizeof(int);
 	this->sizeSM = db.x * db.y * db.z * sizeof(int);
 
@@ -57,8 +56,7 @@ Montecarlo::Montecarlo(float M, int nbFlechettes) :
 		// MM (malloc Device)
 		{
 			HANDLE_ERROR(cudaMalloc(&ptrDevN0, sizeOctetN0));
-			HANDLE_ERROR(
-					cudaMalloc(&ptrTabDevGeneratorGM, sizeOctetTabGenerator));
+			HANDLE_ERROR(cudaMalloc(&ptrTabDevGeneratorGM, sizeOctetTabGenerator));
 		}
 
 		// MM (memset Device)
@@ -70,18 +68,18 @@ Montecarlo::Montecarlo(float M, int nbFlechettes) :
 		Device::lastCudaError("Montecarlo MM (end allocation)"); // temp debug
 	}
 
-setup_kernel_rand<<<dg, db>>>(ptrTabDevGeneratorGM, Device::getDeviceId());
+	setup_kernel_rand<<<dg, db>>>(ptrTabDevGeneratorGM, Device::getDeviceId());
 }
 
 Montecarlo::~Montecarlo(void)
 {
-//MM (device free)
-{
-	HANDLE_ERROR(cudaFree(ptrDevN0));
-	HANDLE_ERROR(cudaFree(ptrTabDevGeneratorGM));
+	//MM (device free)
+	{
+		HANDLE_ERROR(cudaFree(ptrDevN0));
+		HANDLE_ERROR(cudaFree(ptrTabDevGeneratorGM));
 
-	Device::lastCudaError("Montecarlo MM (end deallocation)"); // temp debug
-}
+		Device::lastCudaError("Montecarlo MM (end deallocation)"); // temp debug
+	}
 }
 
 /*--------------------------------------*\
@@ -90,24 +88,26 @@ Montecarlo::~Montecarlo(void)
 
 float Montecarlo::getPi()
 {
-return this->pi;
+	return this->pi;
 }
 
 void Montecarlo::run()
 {
-Device::lastCudaError("Montecarlo (before)"); // temp debug
-montecarlo<<<dg,db, sizeSM>>>(ptrTabDevGeneratorGM, ptrDevN0, nbFlechettes); // assynchrone
-Device::lastCudaError("Montecarlo (after)"); // temp debug
+	Device::lastCudaError("Montecarlo (before)"); // temp debug
+	montecarlo<<<dg,db, sizeSM>>>(ptrTabDevGeneratorGM, ptrDevN0, a, b, M, nbFlechettes); // assynchrone
+	Device::lastCudaError("Montecarlo (after)"); // temp debug
 
-Device::synchronize(); // Temp, only for printf in  GPU
+	Device::synchronize(); // Temp, only for printf in  GPU
 
-// MM (Device -> Host)
-{
-	HANDLE_ERROR(
-			cudaMemcpy(&N0, ptrDevN0, sizeOctetN0, cudaMemcpyDeviceToHost)); // barriere synchronisation implicite
-}
+	// MM (Device -> Host)
+	{
+		HANDLE_ERROR(cudaMemcpy(&N0, ptrDevN0, sizeOctetN0, cudaMemcpyDeviceToHost)); // barriere synchronisation implicite
+	}
 
-pi = (N0 / nbFlechettes) * M; //TODO à vérifier
+	float delta = fabsf(b - a);
+	float rektArea = M * delta;
+	float ratioFlechette = N0 / (float)nbFlechettes;
+	pi = 2 * rektArea * ratioFlechette;
 }
 
 /*--------------------------------------*\

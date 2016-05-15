@@ -1,7 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
 
-
 using std::cout;
 using std::endl;
 
@@ -13,9 +12,10 @@ using std::endl;
  |*		Imported	 	*|
  \*-------------------------------------*/
 
-//extern bool useHello(void);
-//extern bool useAddVecteur(void);
+extern bool useHello(void);
+extern bool useAddVecteur(void);
 extern bool useSlice(void);
+extern bool useMontecarlo(void);
 
 /*--------------------------------------*\
  |*		Public			*|
@@ -24,37 +24,34 @@ extern bool useSlice(void);
 int mainCore();
 
 /*--------------------------------------*\
- |*		Private			*|
+ |*				Private					*|
  \*-------------------------------------*/
-
-
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
  \*---------------------------------------------------------------------*/
 
 /*--------------------------------------*\
- |*		Public			*|
+ |*				Public					*|
  \*-------------------------------------*/
 
 int mainCore()
-    {
-    bool isOk = true;
-//    isOk &= useHello();
-//    isOk &=useAddVecteur();
-    isOk &= useSlice();
+{
+	bool isOk = true;
+	isOk &= useHello();
+//    isOk &=useAddVecteur();	Invalid argument at AddVector.cu @ 52
+	isOk &= useSlice();
+	isOk &= useMontecarlo();
 
-    cout << "\nisOK = " << isOk << endl;
-    cout << "\nEnd : mainCore" << endl;
+	cout << "\nisOK = " << isOk << endl;
+	cout << "\nEnd : mainCore" << endl;
 
-    return isOk ? EXIT_SUCCESS : EXIT_FAILURE;
-    }
+	return isOk ? EXIT_SUCCESS : EXIT_FAILURE;
+}
 
 /*--------------------------------------*\
  |*		Private			*|
  \*-------------------------------------*/
-
-
 
 /*----------------------------------------------------------------------*\
  |*			End	 					*|

@@ -17,17 +17,16 @@
  |*		Public			*|
  \*-------------------------------------*/
 
-__global__ void montecarlo(curandState* ptrTabDevGeneratorGM, int* ptrDevN0,
-		int nbFlechettes);
-__global__ void setup_kernel_rand(curandState* tabGeneratorThread,
-		int deviceId);
+__global__ void montecarlo(curandState* ptrTabDevGeneratorGM, int* ptrDevN0, int nbFlechettes);
+__global__ void setup_kernel_rand(curandState* tabGeneratorThread, int deviceId);
 
 /*--------------------------------------*\
  |*		Private			*|
  \*-------------------------------------*/
 
-static __device__ void reduceIntraThread(int* tabSM, curandState* ptrTabDevGeneratorGM, int nbFlechettes);
-
+static __device__ void reduceIntraThread(int* tabSM, curandState* ptrTabDevGeneratorGM, float a, float b, float M, int nbFlechettes);
+static __device__ float f(float x);
+static __device__ float toAB(float x, float a, float b);
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
  \*---------------------------------------------------------------------*/
@@ -39,11 +38,10 @@ static __device__ void reduceIntraThread(int* tabSM, curandState* ptrTabDevGener
 /**
  * output : void required !!
  */
-__global__ void montecarlo(curandState* ptrTabDevGeneratorGM, int* ptrDevN0,
-		int nbFlechettes)
+__global__ void montecarlo(curandState* ptrTabDevGeneratorGM, int* ptrDevN0, float a, float b, float M, int nbFlechettes)
 {
 	extern __shared__ int tabSM[];
-	reduceIntraThread(tabSM, ptrTabDevGeneratorGM, nbFlechettes);
+	reduceIntraThread(tabSM, ptrTabDevGeneratorGM, a, b, M, nbFlechettes);
 	__syncthreads();
 	reduceIntraBlock (tabSM);
 	reduceInterBlock(tabSM, ptrDevN0);
@@ -67,24 +65,39 @@ __global__ void setup_kernel_rand(curandState* tabGeneratorThread, int deviceId)
  |*		Private			*|
  \*-------------------------------------*/
 
-__device__ void reduceIntraThread(int* tabSM, curandState* ptrTabDevGeneratorGM,
-		int nbFlechettes)
+__device__ void reduceIntraThread(int* tabSM, curandState* ptrTabDevGeneratorGM, float a, float b, float M, int nbFlechettes)
 {
 	const int NB_THREAD = Indice2D::nbThread();
 	const int TID = Indice2D::tid();
+	const int TID_LOCAL = Indice2D::tidLocal();
+
 	int s = TID;
 
-	// Global Memory -> Registre
+	int sumThread = 0;
 	curandState localState = ptrTabDevGeneratorGM[TID];
 
 	while (s < nbFlechettes)
 	{
-		//if curand uniform.y < f (curand uniform.x) --> tabSM[TID_LOCAL]++
-		tabSM[s] = curand_uniform(&localState);
+		float x = toAB(curand_uniform(&localState), a, b);
+		float y = toAB(curand_uniform(&localState), 0.0f, M);
+		if(y < f(x))
+		{
+			sumThread++;
+		}
 		s += NB_THREAD;
 	}
+	tabSM[TID_LOCAL] = sumThread;
 }
 
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/
+__device__ float toAB(float x, float a, float b)
+{
+	return (b - a) / 1.0f * x + a;
+}
+
+__device__ float f(float x)
+{
+	return sqrt(1.0f - x * x);
+}

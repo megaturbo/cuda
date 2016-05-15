@@ -1,4 +1,4 @@
-18:46:20 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+13:50:10 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 makeCudaGCC.sh jall 
 
 --------------------------------------------------------
@@ -150,7 +150,7 @@ Cuda compilation tools, release 7.0, V7.0.27
 
 [CBI] -> Compilation parallel (32 threads)
 
-[Student_Cuda_gcc_cuda_70_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montercarlo/device/MontecarloDevice.cu
+[Student_Cuda_gcc_cuda_70_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc16/Targets/Student_Cuda/bin/Student_Cuda_gcc_cuda_70_x86_64.run
 
@@ -219,7 +219,7 @@ Cuda compilation tools, release 7.0, V7.0.27
 [CBI] ->
 [CBI] -> Compilateur  : g++) && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 7 (s)
+[CBI] -> Time		  : 1 (s)
 ==================================================================================
 
 

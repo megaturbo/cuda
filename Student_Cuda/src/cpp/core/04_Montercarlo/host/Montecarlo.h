@@ -22,7 +22,7 @@ public:
 	/**
 	 * update w by v1+v2
 	 */
-	Montecarlo(float M, int nbFlechettes);
+	Montecarlo(float a, float b, float M, int nbFlechettes);
 
 	virtual ~Montecarlo(void);
 
@@ -42,6 +42,8 @@ public:
 private:
 
 	// Inputs
+	float a;
+	float b;
 	float M;
 	int nbFlechettes;
 

@@ -29,17 +29,19 @@ bool useMontecarlo(void);
  \*---------------------------------------------------------------------*/
 
 /*--------------------------------------*\
- |*		Public			*|
+ |*				Public					*|
  \*-------------------------------------*/
 
 bool useMontecarlo()
 {
-	float M = 10; //TODO Checker
-	int nbFlechettes = INT_MAX / 100000;
+	float a = -1.0f;
+	float b = 1.0f;
+	float M = 1.0f;
+	int nbFlechettes = INT_MAX / 10;
 
-	Montecarlo montecarlo(M, nbFlechettes);
+	Montecarlo montecarlo(a, b, M, nbFlechettes);
 	montecarlo.run();
-	cout << montecarlo.getPi() << endl;
+	cout << "Pi = " << montecarlo.getPi() << endl;
 
 	return true; //TODO
 }
